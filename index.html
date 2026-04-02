@@ -83,41 +83,13 @@
               "Saturday",
               "Sunday"
             ],
-            "opens": "08:00",
-            "closes": "22:30"
+            "opens": "12:00",
+            "closes": "00:00"
           }
         ],
         "hasMenu": "https://www.chailinkrestocafe.co.uk/#menu",
         "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=85",
         "sameAs": ["https://www.instagram.com/chailink_restocafe/"]
-      }
-    </script>
-
-    <!-- STRUCTURED DATA: BreadcrumbList -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.chailinkrestocafe.co.uk/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Menu",
-            "item": "https://www.chailinkrestocafe.co.uk/#menu"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Contact",
-            "item": "https://www.chailinkrestocafe.co.uk/#contact"
-          }
-        ]
       }
     </script>
 
@@ -172,7 +144,6 @@
         font-family: "Cormorant Garamond", serif;
       }
 
-      /* ── NOISE TEXTURE OVERLAY ── */
       body::before {
         content: "";
         position: fixed;
@@ -213,7 +184,6 @@
         height: 64px;
         width: auto;
         display: block;
-        /* logo is white-on-black; keep it visible on dark nav background */
         filter: brightness(0) invert(1);
         transition: opacity 0.2s;
       }
@@ -249,7 +219,6 @@
         background: var(--amber-l) !important;
       }
 
-      /* hamburger */
       .hamburger {
         display: none;
         flex-direction: column;
@@ -434,7 +403,6 @@
         background: rgba(247, 240, 230, 0.08);
         border-color: rgba(247, 240, 230, 0.6);
       }
-
       .insta-btn {
         background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
         color: white !important;
@@ -446,12 +414,10 @@
         transition: all 0.3s ease;
         display: inline-block;
       }
-
       .insta-btn:hover {
         transform: translateY(-2px) scale(1.02);
         box-shadow: 0 10px 25px rgba(221, 42, 123, 0.4);
       }
-
       .hero-scroll {
         position: absolute;
         bottom: 3rem;
@@ -632,23 +598,6 @@
         font-weight: 300;
         margin-bottom: 1.2rem;
       }
-      .about-pills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin-top: 2rem;
-      }
-      .pill {
-        background: var(--cream-2);
-        color: var(--forest);
-        border: 1px solid var(--line);
-        font-size: 0.65rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        padding: 0.45rem 1.1rem;
-        border-radius: 100px;
-        font-weight: 500;
-      }
 
       /* ── PRESS BAR ── */
       #press {
@@ -705,12 +654,14 @@
       #menu .rule {
         background: rgba(247, 240, 230, 0.2);
       }
+
       .menu-tabs {
         display: flex;
         gap: 0;
         margin: 3rem 0 2rem;
         border-bottom: 1px solid rgba(247, 240, 230, 0.1);
         overflow-x: auto;
+        flex-wrap: wrap;
       }
       .tab-btn {
         background: none;
@@ -722,7 +673,7 @@
         letter-spacing: 0.2em;
         text-transform: uppercase;
         font-weight: 500;
-        padding: 0.9rem 1.75rem;
+        padding: 0.9rem 1.5rem;
         border-bottom: 1.5px solid transparent;
         margin-bottom: -1px;
         white-space: nowrap;
@@ -740,7 +691,7 @@
 
       .menu-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 1px;
       }
       .menu-cat {
@@ -753,9 +704,9 @@
       .menu-card {
         background: rgba(247, 240, 230, 0.03);
         border: 1px solid rgba(247, 240, 230, 0.07);
-        padding: 2rem;
+        padding: 1.5rem 2rem;
         display: flex;
-        gap: 1.5rem;
+        gap: 1.25rem;
         align-items: flex-start;
         transition:
           background 0.3s,
@@ -767,30 +718,30 @@
         border-color: rgba(192, 125, 46, 0.25);
       }
       .menu-emoji {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         flex-shrink: 0;
         margin-top: 0.1rem;
         line-height: 1;
       }
       .menu-card h4 {
         font-family: "Cormorant Garamond", serif;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         color: var(--cream);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.35rem;
         line-height: 1.25;
         font-weight: 600;
       }
       .menu-card p {
         color: rgba(247, 240, 230, 0.48);
-        font-size: 0.82rem;
-        line-height: 1.75;
+        font-size: 0.8rem;
+        line-height: 1.65;
         font-weight: 300;
       }
       .menu-price {
         color: var(--amber-l);
-        font-size: 0.82rem;
-        font-weight: 500;
-        margin-top: 0.85rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-top: 0.6rem;
         letter-spacing: 0.04em;
       }
       .menu-tag {
@@ -803,6 +754,15 @@
         padding: 0.15rem 0.55rem;
         border-radius: 1px;
         margin-bottom: 0.4rem;
+      }
+
+      /* price list style for items without description */
+      .menu-card.compact {
+        padding: 1rem 2rem;
+      }
+      .menu-card.compact h4 {
+        margin-bottom: 0;
+        font-size: 1rem;
       }
 
       /* ── SPECIALS ── */
@@ -1007,7 +967,6 @@
         color: #fff;
       }
 
-      /* ── MAP PANEL ── */
       .map-panel {
         display: flex;
         flex-direction: column;
@@ -1065,7 +1024,6 @@
         background: var(--amber-l);
       }
 
-      /* ── FOOTER ── */
       footer {
         background: var(--ink);
         padding: 2.5rem 2rem;
@@ -1106,7 +1064,6 @@
         color: var(--amber-l);
       }
 
-      /* ── REVEAL ── */
       .reveal {
         opacity: 0;
         transform: translateY(24px);
@@ -1131,7 +1088,6 @@
         transition-delay: 0.45s;
       }
 
-      /* ── RESPONSIVE ── */
       @media (max-width: 960px) {
         nav {
           padding: 1.25rem 1.75rem;
@@ -1253,10 +1209,10 @@
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <span class="hero-eyebrow">London · Est. 2023</span>
-        <h1 class="hero-h1">Where the Spice<br />Route Meets <em>Soho</em></h1>
+        <span class="hero-eyebrow">Luton · Est. 2023</span>
+        <h1 class="hero-h1">Where the Spice<br />Route Meets <em>Luton</em></h1>
         <p class="hero-sub">
-          Artisan chai, Malabar coastal plates, and single-origin coffee -
+          Artisan chai, Malabar coastal plates, and single-origin coffee —
           served with the refinement London expects and the warmth Kerala never
           forgets.
         </p>
@@ -1266,9 +1222,8 @@
             href="https://wa.me/447880679498?text=Hi%20ChaiLink%2C%20I%20would%20like%20to%20book%20a%20table.%20Please%20let%20me%20know%20availability."
             target="_blank"
             class="btn-ghost"
+            >Reserve a Table</a
           >
-            Reserve a Table
-          </a>
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">
@@ -1280,25 +1235,15 @@
     <!-- TRUST BAR -->
     <section id="trust" aria-label="Awards and recognition">
       <div class="trust-inner">
-        <div class="trust-item">
-          <strong>4.9 ★</strong>
-          Google Reviews
-        </div>
+        <div class="trust-item"><strong>4.9 ★</strong>Google Reviews</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item"><strong>£££</strong>Fine Casual Dining</div>
         <div class="trust-sep"></div>
         <div class="trust-item">
-          <strong>£££</strong>
-          Fine Casual Dining
+          <strong>Top 10</strong>Indian Cafés - Time Out
         </div>
         <div class="trust-sep"></div>
-        <div class="trust-item">
-          <strong>Top 10</strong>
-          Indian Cafés - Time Out
-        </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item">
-          <strong>Open</strong>
-          Daily · 8 AM – 10:30 PM
-        </div>
+        <div class="trust-item"><strong>Open</strong>Daily · 12 PM – 12 AM</div>
       </div>
     </section>
 
@@ -1324,7 +1269,7 @@
             </h2>
             <div class="rule reveal delay-2"></div>
             <p class="reveal delay-2">
-              ChaiLink was born from a single conviction - that a perfectly
+              ChaiLink was born from a single conviction — that a perfectly
               brewed cup of chai holds the power to slow a city down. Rooted in
               the cardamom-laced culinary traditions of Malabar and the
               backwaters of Kerala, we translate those heirloom recipes into a
@@ -1348,7 +1293,7 @@
         <div class="press-grid">
           <div class="press-quote reveal">
             <blockquote>
-              "The finest masala chai in London - deeply spiced, hauntingly
+              "The finest masala chai in London — deeply spiced, hauntingly
               good."
             </blockquote>
             <cite>— Time Out London</cite>
@@ -1375,7 +1320,7 @@
     <section id="menu" aria-labelledby="menu-heading">
       <div class="inner menu-inner">
         <div style="text-align: center">
-          <span class="label reveal">Curated for London</span>
+          <span class="label reveal">Curated for You</span>
           <h2
             class="h2 reveal delay-1"
             id="menu-heading"
@@ -1398,348 +1343,885 @@
             class="tab-btn active"
             role="tab"
             aria-selected="true"
-            aria-controls="cat-chai"
-            onclick="switchTab('chai', this)"
+            onclick="switchTab('starters', this)"
           >
-            Signature Chai
+            Starters
           </button>
           <button
             class="tab-btn"
             role="tab"
             aria-selected="false"
-            aria-controls="cat-bites"
-            onclick="switchTab('bites', this)"
+            onclick="switchTab('mandi', this)"
           >
-            Small Plates
+            Mandi
           </button>
           <button
             class="tab-btn"
             role="tab"
             aria-selected="false"
-            aria-controls="cat-mains"
-            onclick="switchTab('mains', this)"
+            onclick="switchTab('porotta', this)"
           >
-            Coastal Mains
+            Porotta
           </button>
           <button
             class="tab-btn"
             role="tab"
             aria-selected="false"
-            aria-controls="cat-brews"
-            onclick="switchTab('brews', this)"
+            onclick="switchTab('biriyani', this)"
           >
-            Cold Brews &amp; Elixirs
+            Biriyani
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            onclick="switchTab('rice', this)"
+          >
+            Rice &amp; Curry
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            onclick="switchTab('appam', this)"
+          >
+            Appam &amp; More
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            onclick="switchTab('drinks', this)"
+          >
+            Drinks
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            onclick="switchTab('specials-tab', this)"
+          >
+            Chai Link Special
           </button>
         </div>
 
-        <!-- SIGNATURE CHAI -->
+        <!-- STARTERS -->
         <div
           class="menu-cat menu-grid active"
-          id="cat-chai"
+          id="cat-starters"
           role="tabpanel"
-          aria-label="Signature Chai"
+          aria-label="Starters"
         >
           <div class="menu-card">
-            <div class="menu-emoji">🫖</div>
+            <div class="menu-emoji">🥦</div>
             <div>
-              <div class="menu-tag">House Classic</div>
-              <h4>Classic Masala Chai</h4>
-              <p>
-                Wayanad cardamom, Ceylon cinnamon, fresh ginger root, and whole
-                black pepper — slow-brewed to order and finished with full-fat
-                Jersey milk.
-              </p>
-              <div class="menu-price">£3.80</div>
+              <h4>Gobi 65</h4>
+              <div class="menu-price">£5.99</div>
             </div>
           </div>
           <div class="menu-card">
-            <div class="menu-emoji">🌹</div>
+            <div class="menu-emoji">🌶️</div>
             <div>
-              <div class="menu-tag">House Special</div>
-              <h4>Rose &amp; Saffron Kashmiri Chai</h4>
-              <p>
-                A fragrant blush brew of dried Damascus rose petals,
-                hand-threaded saffron, and warm milk - gently sweetened with raw
-                honey.
-              </p>
-              <div class="menu-price">£5.50</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🌿</div>
-            <div>
-              <div class="menu-tag">Wellness</div>
-              <h4>Tulsi &amp; Ginger Immunity Brew</h4>
-              <p>
-                Sacred holy basil (tulsi), raw turmeric, and a sustained punch
-                of fresh ginger — our most-requested morning ritual.
-              </p>
-              <div class="menu-price">£4.50</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🍫</div>
-            <div>
-              <div class="menu-tag">Indulgent</div>
-              <h4>Dark Chocolate Masala Chai</h4>
-              <p>
-                Single-origin 70% Valrhona dark chocolate folded into our spiced
-                chai base. Frothy, bold, and deeply warming.
-              </p>
-              <div class="menu-price">£5.80</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🌙</div>
-            <div>
-              <div class="menu-tag">Signature</div>
-              <h4>Midnight Moon Chai</h4>
-              <p>
-                Black cardamom, star anise, and a whisper of activated charcoal
-                — a dramatic, smoky evening brew for the curious palate.
-              </p>
-              <div class="menu-price">£5.20</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🧡</div>
-            <div>
-              <div class="menu-tag">Our Best Seller</div>
-              <h4>ChaiLink Signature Blend</h4>
-              <p>
-                Five proprietary spices, double-extracted over 45 minutes,
-                finished tableside with a smoked cinnamon stick. The one people
-                return for.
-              </p>
-              <div class="menu-price">£5.00</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SMALL PLATES -->
-        <div
-          class="menu-cat menu-grid"
-          id="cat-bites"
-          role="tabpanel"
-          aria-label="Small Plates"
-        >
-          <div class="menu-card">
-            <div class="menu-emoji">🥞</div>
-            <div>
-              <div class="menu-tag">From the Malabar</div>
-              <h4>Neypathiri with Slow-Cooked Beef</h4>
-              <p>
-                Lacy rice flatbreads from northern Kerala, served with 8-hour
-                slow-cooked Nadan beef roast and house-pickled shallots.
-              </p>
-              <div class="menu-price">£10.50</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🟤</div>
-            <div>
-              <div class="menu-tag">Vegetarian</div>
-              <h4>Crispy Parippu Vada</h4>
-              <p>
-                Golden chana dal fritters with fresh curry leaves, hand-pounded
-                coconut chutney — a Palakkad street classic, refined.
-              </p>
-              <div class="menu-price">£6.50</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🍌</div>
-            <div>
-              <div class="menu-tag">Vegetarian · V</div>
-              <h4>Nendram Banana Fritters</h4>
-              <p>
-                Kerala's prized Nendram plantain in a gossamer batter, fried to
-                pale gold and dusted with cardamom sugar. A childhood memory,
-                perfected.
-              </p>
-              <div class="menu-price">£6.00</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🧆</div>
-            <div>
-              <div class="menu-tag">Chef's Pick</div>
-              <h4>Mutton Kola Urundai</h4>
-              <p>
-                Finely spiced minced mutton, hand-rolled and fried to a deep
-                mahogany crust. Malabar Muslim street food at its most elegant.
-              </p>
-              <div class="menu-price">£9.50</div>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-emoji">🫓</div>
-            <div>
-              <div class="menu-tag">Vegetarian</div>
-              <h4>Pathiri &amp; Egg Masala</h4>
-              <p>
-                Steamed rice flour flatbread, feather-light, served alongside a
-                bold caramelised onion and heritage tomato egg masala.
-              </p>
-              <div class="menu-price">£8.00</div>
+              <h4>Chilli Gobi</h4>
+              <div class="menu-price">£6.49</div>
             </div>
           </div>
           <div class="menu-card">
             <div class="menu-emoji">🧀</div>
             <div>
-              <div class="menu-tag">Our Take on a Classic</div>
-              <h4>Kerala-Spiced Club Sandwich</h4>
-              <p>
-                Sourdough toasted, layered with Malabar-spiced chicken, house
-                Kerala coleslaw, and a smoked coconut mayo.
-              </p>
-              <div class="menu-price">£10.00</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- COASTAL MAINS -->
-        <div
-          class="menu-cat menu-grid"
-          id="cat-mains"
-          role="tabpanel"
-          aria-label="Coastal Mains"
-        >
-          <div class="menu-card">
-            <div class="menu-emoji">🦞</div>
-            <div>
-              <div class="menu-tag">Signature · Seasonal</div>
-              <h4>Karimeen Pollichathu</h4>
-              <p>
-                Backwater pearl spot fish marinated in a roasted coconut and
-                Malabar spice paste, wrapped in banana leaf and oven-finished. A
-                dish from Kerala's lagoons.
-              </p>
-              <div class="menu-price">£19.50</div>
+              <h4>Paneer Chilli</h4>
+              <div class="menu-price">£6.49</div>
             </div>
           </div>
           <div class="menu-card">
-            <div class="menu-emoji">🍛</div>
+            <div class="menu-emoji">🍟</div>
             <div>
-              <div class="menu-tag">The Jewel of Kerala</div>
-              <h4>Thalassery Biryani</h4>
-              <p>
-                Fragrant Kaima rice layered with free-range spring chicken,
-                caramelised onions, clarified butter, and a bright mint &amp;
-                pomegranate raita.
-              </p>
-              <div class="menu-price">£17.50</div>
+              <h4>Fries</h4>
+              <div class="menu-price">£2.49</div>
             </div>
           </div>
           <div class="menu-card">
-            <div class="menu-emoji">🥥</div>
+            <div class="menu-emoji">🐟</div>
             <div>
-              <div class="menu-tag">Vegetarian · VG</div>
-              <h4>Sadya Platter</h4>
-              <p>
-                A curated Kerala vegetarian feast — butternut squash erissery,
-                olan, pachadi, mango pickle, pappadam and red Matta rice, served
-                on banana leaf.
-              </p>
-              <div class="menu-price">£14.50</div>
+              <h4>Natholi Fry</h4>
+              <div class="menu-price">£8.99</div>
             </div>
           </div>
           <div class="menu-card">
-            <div class="menu-emoji">🍖</div>
+            <div class="menu-emoji">🍗</div>
             <div>
-              <div class="menu-tag">Sunday Ritual, Every Day</div>
-              <h4>Nadan Beef Curry &amp; Appam</h4>
-              <p>
-                Village-recipe beef slow-braised in coconut milk and fresh
-                currry leaves, served with lacy, egg-white appam. The soul of
-                Kerala mornings.
-              </p>
-              <div class="menu-price">£16.00</div>
+              <h4>Alfahm Half (Peri-Peri)</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍗</div>
+            <div>
+              <h4>Alfahm Half (Kaanthari, Dynamite)</h4>
+              <div class="menu-price">£8.99</div>
             </div>
           </div>
           <div class="menu-card">
             <div class="menu-emoji">🦐</div>
             <div>
-              <div class="menu-tag">Coastal</div>
-              <h4>Prawn Moilee</h4>
-              <p>
-                Hand-dived tiger prawns in a delicate turmeric and coconut broth
-                with green chilli and fresh coriander. Coastal Kerala at its
-                most serene.
-              </p>
-              <div class="menu-price">£18.00</div>
+              <h4>Prawn Roast Coconut Milk</h4>
+              <div class="menu-price">£10.99</div>
             </div>
           </div>
           <div class="menu-card">
-            <div class="menu-emoji">🌾</div>
+            <div class="menu-emoji">🐠</div>
             <div>
-              <div class="menu-tag">Vegetarian · VG</div>
-              <h4>Puttu &amp; Kadala Curry</h4>
-              <p>
-                Hand-pressed steamed rice flour cylinders paired with a deeply
-                spiced black chickpea curry, tempered with mustard and dry red
-                chilli.
-              </p>
-              <div class="menu-price">£11.50</div>
+              <h4>Matthi (Fish Fry)</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐡</div>
+            <div>
+              <h4>Avoli (Fish Fry)</h4>
+              <div class="menu-price">£9.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🦑</div>
+            <div>
+              <h4>Kallumakkayi (Missiles Fry)</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍌</div>
+            <div>
+              <h4>Banana Fry – Beef</h4>
+              <div class="menu-price">£8.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐟</div>
+            <div>
+              <h4>Fish Tawa</h4>
+              <div class="menu-price">£13.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐠</div>
+            <div>
+              <h4>Fish Pollichathu</h4>
+              <div class="menu-price">£14.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🌶️</div>
+            <div>
+              <h4>Kaanthari Fish Tawa</h4>
+              <div class="menu-price">£14.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐟</div>
+            <div>
+              <h4>Ayala Fry (Fish)</h4>
+              <div class="menu-price">£4.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍗</div>
+            <div>
+              <h4>Chicken 65</h4>
+              <div class="menu-price">£6.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🌶️</div>
+            <div>
+              <h4>Chilli Chicken</h4>
+              <div class="menu-price">£6.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <h4>Beef Dry Fry</h4>
+              <div class="menu-price">£8.99</div>
             </div>
           </div>
         </div>
 
-        <!-- COLD BREWS -->
+        <!-- MANDI -->
         <div
           class="menu-cat menu-grid"
-          id="cat-brews"
+          id="cat-mandi"
           role="tabpanel"
-          aria-label="Cold Brews and Elixirs"
+          aria-label="Mandi"
         >
           <div class="menu-card">
-            <div class="menu-emoji">☕</div>
+            <div class="menu-emoji">🍚</div>
             <div>
-              <div class="menu-tag">Cold Coffee</div>
-              <h4>Cardamom Cold Brew</h4>
-              <p>
-                18-hour cold-steeped Coorg single-estate coffee infused with
-                whole green cardamom. Silky, aromatic, zero bitterness. No ice
-                needed.
-              </p>
-              <div class="menu-price">£5.50</div>
+              <div class="menu-tag">Pure Mandi Delight</div>
+              <h4>Chicken Mandi</h4>
+              <p>Aromatic rice with slow-cooked, smoky chicken.</p>
+              <div class="menu-price">£7.49</div>
             </div>
           </div>
           <div class="menu-card">
-            <div class="menu-emoji">🧋</div>
+            <div class="menu-emoji">🌶️</div>
             <div>
-              <div class="menu-tag">Seasonal Special</div>
-              <h4>Pandan Coconut Latte</h4>
+              <h4>Peri-Peri Chicken Mandi</h4>
+              <div class="menu-price">£8.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">💥</div>
+            <div>
+              <h4>Dynamite Chicken Mandi</h4>
+              <div class="menu-price">£8.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🔥</div>
+            <div>
+              <h4>Kanthari Chicken Mandi</h4>
+              <div class="menu-price">£8.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <h4>Beef Mandi</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐑</div>
+            <div>
+              <h4>Mutton Mandi</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐟</div>
+            <div>
+              <h4>Fish Mandi</h4>
+              <div class="menu-price">£14.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍖</div>
+            <div>
+              <h4>Lamb Shank Mandi</h4>
+              <div class="menu-price">£13.99</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POROTTA -->
+        <div
+          class="menu-cat menu-grid"
+          id="cat-porotta"
+          role="tabpanel"
+          aria-label="Porotta"
+        >
+          <div class="menu-card">
+            <div class="menu-emoji">🫓</div>
+            <div>
+              <h4>Porotta with Chicken</h4>
+              <div class="menu-price">£9.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🫓</div>
+            <div>
+              <h4>Porotta with Mutton</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🫓</div>
+            <div>
+              <h4>Porotta with Beef</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">✨</div>
+            <div>
+              <div class="menu-tag">Special Porotta</div>
+              <h4>Kizhi Porotta</h4>
+              <p>Chicken · £10.99 &nbsp;/&nbsp; Beef · £11.99</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥛</div>
+            <div>
+              <div class="menu-tag">Special Porotta</div>
+              <h4>Paal Porotta</h4>
+              <p>Chicken · £11.99 &nbsp;/&nbsp; Beef · £12.49</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥚</div>
+            <div>
+              <div class="menu-tag">Special Porotta</div>
+              <h4>Kothu Porotta</h4>
               <p>
-                Ristretto swirled through house-made pandan leaf syrup and
-                cold-pressed coconut milk. Tropics meet the roastery.
+                Egg · £6.99 &nbsp;/&nbsp; Chicken · £7.99 &nbsp;/&nbsp; Beef ·
+                £9.99 &nbsp;/&nbsp; Mutton · £9.99
               </p>
-              <div class="menu-price">£5.80</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BIRIYANI -->
+        <div
+          class="menu-cat menu-grid"
+          id="cat-biriyani"
+          role="tabpanel"
+          aria-label="Biriyani"
+        >
+          <div class="menu-card">
+            <div class="menu-emoji">🥚</div>
+            <div>
+              <div class="menu-tag">Fiery, Fragrant &amp; Festive</div>
+              <h4>Egg Biriyani</h4>
+              <div class="menu-price">£5.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍗</div>
+            <div>
+              <h4>Chicken Biriyani</h4>
+              <div class="menu-price">£7.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐑</div>
+            <div>
+              <h4>Mutton Biriyani</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐡</div>
+            <div>
+              <h4>Avoli Biriyani</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <h4>Beef Biriyani</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍗</div>
+            <div>
+              <h4>Chicken Kizhi Biriyani</h4>
+              <div class="menu-price">£8.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐑</div>
+            <div>
+              <h4>Mutton Kizhi Biriyani</h4>
+              <div class="menu-price">£9.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <h4>Beef Kizhi Biriyani</h4>
+              <div class="menu-price">£9.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🦐</div>
+            <div>
+              <h4>Prawn Biriyani</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RICE & CURRY -->
+        <div
+          class="menu-cat menu-grid"
+          id="cat-rice"
+          role="tabpanel"
+          aria-label="Rice and Curry"
+        >
+          <div class="menu-card">
+            <div class="menu-emoji">🥥</div>
+            <div>
+              <div class="menu-tag">Paal Kappa</div>
+              <h4>Paal Kappa Fish</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥥</div>
+            <div>
+              <div class="menu-tag">Paal Kappa</div>
+              <h4>Paal Kappa Beef</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍚</div>
+            <div>
+              <div class="menu-tag">Ghee Rice</div>
+              <h4>Chicken Ghee Rice</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍚</div>
+            <div>
+              <div class="menu-tag">Ghee Rice</div>
+              <h4>Beef Ghee Rice</h4>
+              <div class="menu-price">£11.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍚</div>
+            <div>
+              <div class="menu-tag">Ghee Rice</div>
+              <h4>Mutton Ghee Rice</h4>
+              <div class="menu-price">£11.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍛</div>
+            <div>
+              <div class="menu-tag">Curry</div>
+              <h4>Sambar</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🧀</div>
+            <div>
+              <div class="menu-tag">Curry</div>
+              <h4>Paneer Butter Masala</h4>
+              <div class="menu-price">£6.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐟</div>
+            <div>
+              <div class="menu-tag">Curry</div>
+              <h4>Fish Curry</h4>
+              <div class="menu-price">£7.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <div class="menu-tag">Curry</div>
+              <h4>Beef Curry</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍗</div>
+            <div>
+              <div class="menu-tag">Curry</div>
+              <h4>Malabar Chicken Curry</h4>
+              <div class="menu-price">£6.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🧈</div>
+            <div>
+              <div class="menu-tag">Curry</div>
+              <h4>Butter Chicken</h4>
+              <div class="menu-price">£6.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐑</div>
+            <div>
+              <div class="menu-tag">Curry</div>
+              <h4>Mutton Curry</h4>
+              <div class="menu-price">£8.99</div>
+            </div>
+          </div>
+          <!-- Special Meals -->
+          <div class="menu-card">
+            <div class="menu-emoji">🌿</div>
+            <div>
+              <div class="menu-tag">Special Meals</div>
+              <h4>Veg Meals</h4>
+              <div class="menu-price">£7.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍚</div>
+            <div>
+              <div class="menu-tag">Special Meals</div>
+              <h4>Pothi Choru</h4>
+              <p>Homely beef choru with cool moru — comfort on a plate.</p>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍚</div>
+            <div>
+              <div class="menu-tag">Special Meals</div>
+              <h4>Chatti Choru</h4>
+              <div class="menu-price">£11.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <div class="menu-tag">Special Meals</div>
+              <h4>Beef – Choru – Moru</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐟</div>
+            <div>
+              <div class="menu-tag">Special Meals</div>
+              <h4>Fish – Choru – Moru</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍗</div>
+            <div>
+              <div class="menu-tag">Special Meals</div>
+              <h4>Chicken Curry – Choru – Moru</h4>
+              <div class="menu-price">£9.99</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- APPAM & MORE -->
+        <div
+          class="menu-cat menu-grid"
+          id="cat-appam"
+          role="tabpanel"
+          aria-label="Appam and More"
+        >
+          <div class="menu-card">
+            <div class="menu-emoji">🥞</div>
+            <div>
+              <div class="menu-tag">Appam</div>
+              <h4>Appam + Chicken Curry</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥞</div>
+            <div>
+              <div class="menu-tag">Appam</div>
+              <h4>Appam + Beef Curry</h4>
+              <div class="menu-price">£11.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥞</div>
+            <div>
+              <div class="menu-tag">Appam</div>
+              <h4>Appam + Mutton Curry</h4>
+              <div class="menu-price">£11.99</div>
+            </div>
+          </div>
+          <!-- Platter -->
+          <div class="menu-card">
+            <div class="menu-emoji">🍽️</div>
+            <div>
+              <div class="menu-tag">Platter · Serves 3–4</div>
+              <h4>Mandi Platter</h4>
+              <p>A spread to remember, for tables that love to share.</p>
+              <div class="menu-price">£27.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <div class="menu-tag">Platter</div>
+              <h4>Beef Platter</h4>
+              <div class="menu-price">£35.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🐟</div>
+            <div>
+              <div class="menu-tag">Platter</div>
+              <h4>Fish Platter</h4>
+              <div class="menu-price">£57.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍽️</div>
+            <div>
+              <div class="menu-tag">Platter</div>
+              <h4>Mixed Platter</h4>
+              <div class="menu-price">£49.99</div>
+            </div>
+          </div>
+          <!-- Extras -->
+          <div class="menu-card">
+            <div class="menu-emoji">➕</div>
+            <div>
+              <div class="menu-tag">Extras</div>
+              <h4>Appam</h4>
+              <div class="menu-price">£1.50</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">➕</div>
+            <div>
+              <div class="menu-tag">Extras</div>
+              <h4>Naan</h4>
+              <div class="menu-price">£1.50</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">➕</div>
+            <div>
+              <div class="menu-tag">Extras</div>
+              <h4>Poratta</h4>
+              <div class="menu-price">£1.50</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">➕</div>
+            <div>
+              <div class="menu-tag">Extras</div>
+              <h4>Gheerice</h4>
+              <div class="menu-price">£4.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">➕</div>
+            <div>
+              <div class="menu-tag">Extras</div>
+              <h4>Mandirice</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">➕</div>
+            <div>
+              <div class="menu-tag">Extras</div>
+              <h4>Biriyani Rice</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DRINKS -->
+        <div
+          class="menu-cat menu-grid"
+          id="cat-drinks"
+          role="tabpanel"
+          aria-label="Drinks"
+        >
+          <!-- Hot Drinks -->
+          <div class="menu-card">
+            <div class="menu-emoji">☕</div>
+            <div>
+              <div class="menu-tag">Hot Drinks</div>
+              <h4>Tea</h4>
+              <div class="menu-price">£2.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">☕</div>
+            <div>
+              <div class="menu-tag">Hot Drinks</div>
+              <h4>Coffee</h4>
+              <div class="menu-price">£2.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥤</div>
+            <div>
+              <div class="menu-tag">Hot Drinks</div>
+              <h4>Boost</h4>
+              <div class="menu-price">£2.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥛</div>
+            <div>
+              <div class="menu-tag">Hot Drinks</div>
+              <h4>Horlicks</h4>
+              <div class="menu-price">£2.49</div>
             </div>
           </div>
           <div class="menu-card">
             <div class="menu-emoji">🍋</div>
             <div>
-              <div class="menu-tag">Non-Caffeinated · V</div>
-              <h4>Neera &amp; Lemon Cooler</h4>
-              <p>
-                Fresh coconut palm nectar (Neera), pressed lemon, Himalayan
-                black salt, and hand-crushed ice. Kerala's original wellness
-                drink.
-              </p>
-              <div class="menu-price">£5.20</div>
+              <div class="menu-tag">Hot Drinks</div>
+              <h4>Lemon Tea</h4>
+              <div class="menu-price">£1.99</div>
+            </div>
+          </div>
+          <!-- Mocktails -->
+          <div class="menu-card">
+            <div class="menu-emoji">🍹</div>
+            <div>
+              <div class="menu-tag">Mocktails</div>
+              <h4>Classic Lime Mojito</h4>
+              <div class="menu-price">£3.99</div>
             </div>
           </div>
           <div class="menu-card">
-            <div class="menu-emoji">🌺</div>
+            <div class="menu-emoji">🍹</div>
             <div>
-              <div class="menu-tag">Non-Caffeinated · V</div>
-              <h4>Hibiscus &amp; Rosehip Iced Tea</h4>
-              <p>
-                Cold-brewed hibiscus flowers and rosehip with a measure of fresh
-                ginger honey. Ruby red, complex, and beautifully refreshing.
-              </p>
-              <div class="menu-price">£4.80</div>
+              <div class="menu-tag">Mocktails</div>
+              <h4>Raspberry Mojito</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥭</div>
+            <div>
+              <div class="menu-tag">Mocktails</div>
+              <h4>Mango Mojito</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🫐</div>
+            <div>
+              <div class="menu-tag">Mocktails</div>
+              <h4>Blue Lagoon Mojito</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍈</div>
+            <div>
+              <div class="menu-tag">Mocktails</div>
+              <h4>Passion Fruit Mojito</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍓</div>
+            <div>
+              <div class="menu-tag">Mocktails</div>
+              <h4>Strawberry Cooler</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍍</div>
+            <div>
+              <div class="menu-tag">Mocktails</div>
+              <h4>Pina Colada</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <!-- Milkshakes -->
+          <div class="menu-card">
+            <div class="menu-emoji">🥭</div>
+            <div>
+              <div class="menu-tag">Milkshakes · £4.99 each</div>
+              <h4>Mango / Banana / Oreo / Snickers / Strawberry</h4>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥑</div>
+            <div>
+              <div class="menu-tag">Milkshakes · £4.99 each</div>
+              <h4>Avocado / KitKat / Pistachio / Sharjah / Chikku</h4>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥥</div>
+            <div>
+              <div class="menu-tag">Milkshakes · £4.99 each</div>
+              <h4>Tender Coconut / Kannur Cocktail</h4>
+            </div>
+          </div>
+          <!-- Juices & Desserts -->
+          <div class="menu-card">
+            <div class="menu-emoji">🍋</div>
+            <div>
+              <div class="menu-tag">Juices &amp; Desserts</div>
+              <h4>Fresh Lime Juice</h4>
+              <div class="menu-price">£2.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍊</div>
+            <div>
+              <div class="menu-tag">Juices &amp; Desserts</div>
+              <h4>Orange Juice</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🌿</div>
+            <div>
+              <div class="menu-tag">Juices &amp; Desserts</div>
+              <h4>Mint Lime</h4>
+              <div class="menu-price">£3.49</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍎</div>
+            <div>
+              <div class="menu-tag">Juices &amp; Desserts</div>
+              <h4>Apple Juice</h4>
+              <div class="menu-price">£3.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍮</div>
+            <div>
+              <div class="menu-tag">Juices &amp; Desserts</div>
+              <h4>Gulab Jamun with Ice Cream</h4>
+              <div class="menu-price">£4.99</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHAI LINK SPECIAL -->
+        <div
+          class="menu-cat menu-grid"
+          id="cat-specials-tab"
+          role="tabpanel"
+          aria-label="Chai Link Special"
+        >
+          <div class="menu-card">
+            <div class="menu-emoji">🌸</div>
+            <div>
+              <div class="menu-tag">Seasonal</div>
+              <h4>Madhooth (Seasonal)</h4>
+              <div class="menu-price">£7.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🫓</div>
+            <div>
+              <div class="menu-tag">Chai Link Special</div>
+              <h4>Pathiri Beef</h4>
+              <div class="menu-price">£11.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🍗</div>
+            <div>
+              <div class="menu-tag">Chai Link Special</div>
+              <h4>Idiyappam Chicken</h4>
+              <div class="menu-price">£10.99</div>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="menu-emoji">🥩</div>
+            <div>
+              <div class="menu-tag">Chai Link Special</div>
+              <h4>Idiyappam Beef</h4>
+              <div class="menu-price">£11.99</div>
             </div>
           </div>
         </div>
@@ -1753,8 +2235,8 @@
             letter-spacing: 0.08em;
           "
         >
-          V · Vegan &nbsp;|&nbsp; All prices include VAT &nbsp;|&nbsp; Please
-          inform your server of any allergies
+          All prices include VAT &nbsp;|&nbsp; Please inform your server of any
+          allergies
         </p>
       </div>
     </section>
@@ -1788,51 +2270,48 @@
           <div class="special-card reveal delay-1">
             <img
               src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80"
-              alt="Palakkadan Sadya Platter — Kerala vegetarian feast on banana leaf"
+              alt="Mandi Platter"
               class="special-img"
               loading="lazy"
             />
             <div class="special-body">
               <div class="special-tag">🏆 Bestseller</div>
-              <h3>Palakkadan Sadya Platter</h3>
+              <h3>Mandi Platter</h3>
               <p>
-                A curated mini-sadya inspired by Palakkad Brahmin cuisine —
-                seven small preparations served on a fresh banana leaf with red
-                Matta rice.
+                Aromatic Mandi rice with your choice of protein — a spread to
+                remember, for tables that love to share. Serves 3–4.
               </p>
             </div>
           </div>
           <div class="special-card reveal delay-2">
             <img
               src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&q=80"
-              alt="Varutharacha Meen Curry — roasted coconut fish curry"
+              alt="Fish Pollichathu"
               class="special-img"
               loading="lazy"
             />
             <div class="special-body">
-              <div class="special-tag">🌿 Chef's Table</div>
-              <h3>Varutharacha Meen Curry</h3>
+              <div class="special-tag">🌿 Chef's Pick</div>
+              <h3>Fish Pollichathu</h3>
               <p>
-                A fiery roasted coconut fish curry, slow-simmered in an uruli.
-                Smoky, layered, and singularly Kerala. Pairs with hand-patted
-                Malabar parotta.
+                Whole fish marinated in Malabar spices, wrapped in banana leaf
+                and slow-cooked to perfection. A true Kerala classic.
               </p>
             </div>
           </div>
           <div class="special-card reveal delay-3">
             <img
               src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80"
-              alt="Palakkad Filter Kaapi — South Indian filter coffee"
+              alt="Pathiri Beef"
               class="special-img"
               loading="lazy"
             />
             <div class="special-body">
-              <div class="special-tag">☕ Regional Brew</div>
-              <h3>Palakkad Filter Kaapi</h3>
+              <div class="special-tag">⭐ Chai Link Special</div>
+              <h3>Pathiri Beef</h3>
               <p>
-                Traditional decoction from Palakkad estate beans, dispensed into
-                a brass tumbler and davara — strong, creamy, and
-                unapologetically South Indian.
+                Thin steamed rice flour flatbreads paired with deeply spiced
+                Malabar beef — an iconic Malappuram combination.
               </p>
             </div>
           </div>
@@ -1861,7 +2340,7 @@
           <div class="gallery-item">
             <img
               src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80"
-              alt="Artisan chai being poured at ChaiLink London"
+              alt="Artisan chai being poured at ChaiLink"
               loading="lazy"
             />
             <div class="gallery-ov"><span class="gallery-ov-icon">✦</span></div>
@@ -1901,7 +2380,7 @@
           <div class="gallery-item">
             <img
               src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&q=80"
-              alt="Elegant dining at ChaiLink London"
+              alt="Elegant dining at ChaiLink"
               loading="lazy"
             />
             <div class="gallery-ov"><span class="gallery-ov-icon">✦</span></div>
@@ -1924,7 +2403,6 @@
     <section id="contact" aria-labelledby="contact-heading">
       <div class="inner">
         <div class="contact-grid">
-          <!-- LEFT: Info -->
           <div class="contact-info">
             <span class="label reveal">Visit Us</span>
             <h2 class="h2 reveal delay-1" id="contact-heading">
@@ -1943,7 +2421,7 @@
               <div>
                 <div class="c-lbl">Reservations &amp; Enquiries</div>
                 <div class="c-val">
-                  <a href="tel:+447880679498">Safar · +44 7880 679498</a>
+                  <a href="tel:+447880679498">07880 679498</a>
                 </div>
               </div>
             </div>
@@ -1962,7 +2440,7 @@
               <div class="c-icon">📍</div>
               <div>
                 <div class="c-lbl">Location</div>
-                <div class="c-val">Chai Link Resto Cafe, Luton</div>
+                <div class="c-val">38 Park St, Luton LU1 3ET</div>
               </div>
             </div>
             <div class="c-item reveal delay-3">
@@ -2017,7 +2495,6 @@
             </div>
           </div>
 
-          <!-- RIGHT: Map -->
           <div class="map-panel reveal delay-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.0933680899357!2d-0.4119151!3d51.8775082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876497de01332fb%3A0x96f1836e0ea0cd2b!2sChai%20Link%20Resto%20Cafe!5e0!3m2!1sen!2sin!4v1775091522391!5m2!1sen!2sin"
@@ -2027,20 +2504,20 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="ChaiLink Resto Cafe on Google Maps"
-            ></iframe>
+            >
+            </iframe>
             <div class="map-footer">
               <div class="map-footer-addr">
                 <strong>Chai Link Resto Cafe</strong>
-                Luton, United Kingdom
+                38 Park St, Luton LU1 3ET
               </div>
               <a
                 href="https://maps.google.com/?q=51.8775082,-0.4119151"
                 target="_blank"
                 rel="noopener"
                 class="map-directions-btn"
+                >↗ Get Directions</a
               >
-                ↗ Get Directions
-              </a>
             </div>
           </div>
         </div>
@@ -2065,26 +2542,24 @@
           >
         </div>
         <p class="footer-legal">
-          © 2025 ChaiLink Ltd · All rights reserved · London, United Kingdom
+          © 2025 ChaiLink Ltd · All rights reserved · Luton, United Kingdom
         </p>
         <p class="footer-legal" style="margin-top: 0.5rem; opacity: 0.8">
-          Registered in London<br />
+          38 Park St, Luton LU1 3ET &nbsp;·&nbsp; 07880 679498<br />
           <span style="font-size: 0.85rem">
             Crafted with ❤️ by
             <a
               href="https://wa.me/919188070526"
               target="_blank"
               style="color: #b8953a; text-decoration: none; font-weight: 500"
+              >Vichu</a
             >
-              Vichu
-            </a>
           </span>
         </p>
       </div>
     </footer>
 
     <script>
-      // NAV SCROLL
       const nav = document.getElementById("navbar");
       window.addEventListener(
         "scroll",
@@ -2094,15 +2569,14 @@
         { passive: true },
       );
 
-      // MOBILE MENU
       function toggleMenu() {
         const m = document.getElementById("mobileMenu");
         m.classList.toggle("open");
-        const btn = document.querySelector(".hamburger");
-        btn.setAttribute("aria-expanded", m.classList.contains("open"));
+        document
+          .querySelector(".hamburger")
+          .setAttribute("aria-expanded", m.classList.contains("open"));
       }
 
-      // MENU TABS
       function switchTab(cat, btn) {
         document
           .querySelectorAll(".menu-cat")
@@ -2116,7 +2590,6 @@
         btn.setAttribute("aria-selected", "true");
       }
 
-      // SCROLL REVEAL
       const reveals = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
