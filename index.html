@@ -127,6 +127,8 @@
       html {
         scroll-behavior: smooth;
         font-size: 16px;
+        /* Offset anchor scrolls so content never hides behind fixed navbar */
+        scroll-padding-top: 80px;
       }
 
       body {
@@ -2430,8 +2432,13 @@
               <div>
                 <div class="c-lbl">Email</div>
                 <div class="c-val">
-                  <a href="mailto:hello@chailinkrestocafe.co.uk"
-                    >hello@chailinkrestocafe.co.uk</a
+                  <a
+                    href="/cdn-cgi/l/email-protection#5b333e3737341b38333a3237323530293e282f34383a3d3e753834752e30"
+                    ><span
+                      class="__cf_email__"
+                      data-cfemail="6b030e0707042b08030a0207020500190e181f04080a0d0e450804451e00"
+                      >[email&#160;protected]</span
+                    ></a
                   >
                 </div>
               </div>
@@ -2559,6 +2566,10 @@
       </div>
     </footer>
 
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
     <script>
       const nav = document.getElementById("navbar");
       window.addEventListener(
@@ -2603,6 +2614,32 @@
         { threshold: 0.1 },
       );
       reveals.forEach((el) => observer.observe(el));
+
+      // ── iOS-SAFE ANCHOR SCROLL ──
+      // Manually intercept anchor clicks and offset by navbar height.
+      // Fixes content scrolling behind the fixed navbar on iPhone Safari.
+      const NAV_HEIGHT = 80;
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          var targetId = this.getAttribute("href").slice(1);
+          if (!targetId) return;
+          var target = document.getElementById(targetId);
+          if (!target) return;
+          e.preventDefault();
+          var top =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            NAV_HEIGHT;
+          window.scrollTo({ top: top, behavior: "smooth" });
+          var mobileMenu = document.getElementById("mobileMenu");
+          if (mobileMenu.classList.contains("open")) {
+            mobileMenu.classList.remove("open");
+            document
+              .querySelector(".hamburger")
+              .setAttribute("aria-expanded", "false");
+          }
+        });
+      });
     </script>
   </body>
 </html>
