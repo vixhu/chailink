@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- PRIMARY SEO -->
-    <title>ChaiLink · Premium Indian Café & Restaurant | London</title>
+    <title>ChaiLink · Premium Indian Café & Restaurant | Luton</title>
     <meta
       name="description"
-      content="ChaiLink is London's finest Indian café — artisan chai, Malabar coastal cuisine, and slow-brewed speciality coffee. Refined South Asian dining in the heart of the city. Book your table today."
+      content="ChaiLink is London's finest Indian café - artisan chai, Malabar coastal cuisine, and slow-brewed speciality coffee. Refined South Asian dining in the heart of the city. Book your table today."
     />
     <meta
       name="keywords"
@@ -22,7 +22,7 @@
     <meta property="og:type" content="restaurant" />
     <meta
       property="og:title"
-      content="ChaiLink · Premium Indian Café & Restaurant | London"
+      content="ChaiLink · Premium Indian Café & Restaurant | Luton"
     />
     <meta
       property="og:description"
@@ -40,7 +40,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="ChaiLink · Premium Indian Café | London"
+      content="ChaiLink · Premium Indian Café | Luton"
     />
     <meta
       name="twitter:description"
@@ -429,6 +429,24 @@
         background: rgba(247, 240, 230, 0.08);
         border-color: rgba(247, 240, 230, 0.6);
       }
+
+      .insta-btn {
+        background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+        color: white !important;
+        border: none !important;
+        padding: 0.9rem 2rem;
+        border-radius: 999px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .insta-btn:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(221, 42, 123, 0.4);
+      }
+
       .hero-scroll {
         position: absolute;
         bottom: 3rem;
@@ -983,16 +1001,63 @@
         border-color: var(--amber);
         color: #fff;
       }
-      .map-wrap {
-        border-radius: 1px;
-        overflow: hidden;
-        height: 380px;
+
+      /* ── MAP PANEL ── */
+      .map-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
         border: 1px solid rgba(247, 240, 230, 0.07);
+        border-radius: 2px;
+        overflow: hidden;
       }
-      .map-wrap iframe {
+      .map-panel iframe {
         width: 100%;
-        height: 100%;
+        height: 420px;
         border: none;
+        display: block;
+      }
+      .map-footer {
+        background: rgba(247, 240, 230, 0.04);
+        border-top: 1px solid rgba(247, 240, 230, 0.07);
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .map-footer-addr {
+        font-size: 0.78rem;
+        color: rgba(247, 240, 230, 0.5);
+        line-height: 1.6;
+      }
+      .map-footer-addr strong {
+        display: block;
+        color: var(--cream);
+        font-size: 0.82rem;
+        font-weight: 500;
+        margin-bottom: 0.15rem;
+      }
+      .map-directions-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--amber);
+        color: #fff;
+        font-size: 0.65rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0.6rem 1.2rem;
+        border-radius: 1px;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.2s;
+        flex-shrink: 0;
+      }
+      .map-directions-btn:hover {
+        background: var(--amber-l);
       }
 
       /* ── FOOTER ── */
@@ -1094,6 +1159,9 @@
         nav.scrolled {
           padding: 1rem 1.75rem;
         }
+        .map-panel iframe {
+          height: 320px;
+        }
       }
       @media (max-width: 640px) {
         section {
@@ -1122,6 +1190,9 @@
         }
         .press-grid {
           gap: 2.5rem;
+        }
+        .map-panel iframe {
+          height: 260px;
         }
       }
     </style>
@@ -1178,13 +1249,19 @@
         <span class="hero-eyebrow">London · Est. 2023</span>
         <h1 class="hero-h1">Where the Spice<br />Route Meets <em>Soho</em></h1>
         <p class="hero-sub">
-          Artisan chai, Malabar coastal plates, and single-origin coffee —
+          Artisan chai, Malabar coastal plates, and single-origin coffee -
           served with the refinement London expects and the warmth Kerala never
           forgets.
         </p>
         <div class="hero-ctas">
           <a href="#menu" class="btn-primary">Explore the Menu</a>
-          <a href="#contact" class="btn-ghost">Reserve a Table</a>
+          <a
+            href="https://wa.me/447880679498?text=Hi%20ChaiLink%2C%20I%20would%20like%20to%20book%20a%20table.%20Please%20let%20me%20know%20availability."
+            target="_blank"
+            class="btn-ghost"
+          >
+            Reserve a Table
+          </a>
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">
@@ -1208,7 +1285,7 @@
         <div class="trust-sep"></div>
         <div class="trust-item">
           <strong>Top 10</strong>
-          Indian Cafés — Time Out
+          Indian Cafés - Time Out
         </div>
         <div class="trust-sep"></div>
         <div class="trust-item">
@@ -1240,7 +1317,7 @@
             </h2>
             <div class="rule reveal delay-2"></div>
             <p class="reveal delay-2">
-              ChaiLink was born from a single conviction — that a perfectly
+              ChaiLink was born from a single conviction - that a perfectly
               brewed cup of chai holds the power to slow a city down. Rooted in
               the cardamom-laced culinary traditions of Malabar and the
               backwaters of Kerala, we translate those heirloom recipes into a
@@ -1252,13 +1329,6 @@
               with aged beef roast to our single-origin filter kaapi, ChaiLink
               is a love letter to South India — plated for the capital.
             </p>
-            <div class="about-pills reveal delay-4">
-              <span class="pill">🫖 Artisan Chai</span>
-              <span class="pill">🌿 Kerala Spice</span>
-              <span class="pill">🍛 Malabar Kitchen</span>
-              <span class="pill">☕ Single-Origin Coffee</span>
-              <span class="pill">🌱 Plant-Forward Options</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1271,7 +1341,7 @@
         <div class="press-grid">
           <div class="press-quote reveal">
             <blockquote>
-              "The finest masala chai in London — deeply spiced, hauntingly
+              "The finest masala chai in London - deeply spiced, hauntingly
               good."
             </blockquote>
             <cite>— Time Out London</cite>
@@ -1382,7 +1452,7 @@
               <h4>Rose &amp; Saffron Kashmiri Chai</h4>
               <p>
                 A fragrant blush brew of dried Damascus rose petals,
-                hand-threaded saffron, and warm milk — gently sweetened with raw
+                hand-threaded saffron, and warm milk - gently sweetened with raw
                 honey.
               </p>
               <div class="menu-price">£5.50</div>
@@ -1807,7 +1877,7 @@
           </div>
           <div class="gallery-item">
             <img
-              src="https://images.unsplash.com/photo-1518972734183-c4550fd7ff58?w=600&q=80"
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80"
               alt="Malabar spices at ChaiLink restaurant"
               loading="lazy"
             />
@@ -1835,8 +1905,7 @@
             href="https://www.instagram.com/chailink_restocafe/"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-ghost"
-            style="border-color: rgba(247, 240, 230, 0.25); color: var(--cream)"
+            class="btn-ghost insta-btn"
           >
             Follow us on Instagram &nbsp; @chailink_restocafe
           </a>
@@ -1848,6 +1917,7 @@
     <section id="contact" aria-labelledby="contact-heading">
       <div class="inner">
         <div class="contact-grid">
+          <!-- LEFT: Info -->
           <div class="contact-info">
             <span class="label reveal">Visit Us</span>
             <h2 class="h2 reveal delay-1" id="contact-heading">
@@ -1885,26 +1955,14 @@
               <div class="c-icon">📍</div>
               <div>
                 <div class="c-lbl">Location</div>
-                <div class="c-val">
-                  <a
-                    href="https://maps.app.goo.gl/x8hMeM8tpg8hrd118"
-                    target="_blank"
-                    rel="noopener"
-                    >Get Directions →</a
-                  >
-                </div>
+                <div class="c-val">Chai Link Resto Cafe, Luton</div>
               </div>
             </div>
             <div class="c-item reveal delay-3">
               <div class="c-icon">🕘</div>
               <div>
                 <div class="c-lbl">Opening Hours</div>
-                <div class="c-val">
-                  Daily · 8:00 AM – 10:30 PM<br /><span
-                    style="opacity: 0.55; font-size: 0.8rem"
-                    >Kitchen closes at 9:45 PM</span
-                  >
-                </div>
+                <div class="c-val">Daily · 12:00 PM – 12:00 AM</div>
               </div>
             </div>
 
@@ -1952,14 +2010,31 @@
             </div>
           </div>
 
-          <div class="map-wrap reveal delay-2">
+          <!-- RIGHT: Map -->
+          <div class="map-panel reveal delay-2">
             <iframe
-              src="https://maps.google.com/maps?q=ChaiLink+RestoCafe+Palakkad&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.0933680899357!2d-0.4119151!3d51.8775082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876497de01332fb%3A0x96f1836e0ea0cd2b!2sChai%20Link%20Resto%20Cafe!5e0!3m2!1sen!2sin!4v1775091522391!5m2!1sen!2sin"
+              width="600"
+              height="450"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="ChaiLink location map"
+              title="ChaiLink Resto Cafe on Google Maps"
             ></iframe>
+            <div class="map-footer">
+              <div class="map-footer-addr">
+                <strong>Chai Link Resto Cafe</strong>
+                Luton, United Kingdom
+              </div>
+              <a
+                href="https://maps.google.com/?q=51.8775082,-0.4119151"
+                target="_blank"
+                rel="noopener"
+                class="map-directions-btn"
+              >
+                ↗ Get Directions
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1981,11 +2056,20 @@
           >
         </div>
         <p class="footer-legal">
-          © 2025 ChaiLink Ltd · Company No. 00000000 · All rights reserved ·
-          London, United Kingdom
+          © 2025 ChaiLink Ltd · All rights reserved · London, United Kingdom
         </p>
-        <p class="footer-legal" style="margin-top: 0.25rem">
-          Registered in England &amp; Wales · VAT No. 000 0000 00
+        <p class="footer-legal" style="margin-top: 0.5rem; opacity: 0.8">
+          Registered in London<br />
+          <span style="font-size: 0.85rem">
+            Crafted with ❤️ by
+            <a
+              href="https://wa.me/919188070526"
+              target="_blank"
+              style="color: #b8953a; text-decoration: none; font-weight: 500"
+            >
+              Vichu
+            </a>
+          </span>
         </p>
       </div>
     </footer>
