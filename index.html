@@ -545,8 +545,11 @@
       }
 
       /* ── ABOUT ── */
+      /* FIX: overflow hidden prevents the about image/accent from bleeding
+         above the section and behind the fixed navbar */
       #about {
         background: var(--cream);
+        overflow: hidden;
       }
       .about-grid {
         display: grid;
@@ -556,6 +559,9 @@
       }
       .about-img-wrap {
         position: relative;
+        /* FIX: padding-bottom gives room for the accent circle
+           so it doesn't overflow outside the section boundary */
+        padding-bottom: 2.5rem;
       }
       .about-img {
         width: 100%;
@@ -1107,6 +1113,9 @@
         .about-img-wrap {
           max-width: 440px;
           margin: 0 auto;
+          /* FIX: keep the padding-bottom on mobile too so the accent
+             circle stays inside the section and doesn't overflow upward */
+          padding-bottom: 2.5rem;
         }
         .specials-grid {
           grid-template-columns: 1fr 1fr;
@@ -1144,8 +1153,9 @@
         .about-accent {
           width: 95px;
           height: 95px;
-          right: -0.5rem;
-          bottom: -0.5rem;
+          /* FIX: keep accent circle inside section on small phones */
+          right: 0;
+          bottom: 0;
         }
         .accent-num {
           font-size: 1.5rem;
@@ -2432,13 +2442,8 @@
               <div>
                 <div class="c-lbl">Email</div>
                 <div class="c-val">
-                  <a
-                    href="/cdn-cgi/l/email-protection#5b333e3737341b38333a3237323530293e282f34383a3d3e753834752e30"
-                    ><span
-                      class="__cf_email__"
-                      data-cfemail="6b030e0707042b08030a0207020500190e181f04080a0d0e450804451e00"
-                      >[email&#160;protected]</span
-                    ></a
+                  <a href="mailto:hello@chailinkrestocafe.co.uk"
+                    >hello@chailinkrestocafe.co.uk</a
                   >
                 </div>
               </div>
@@ -2566,10 +2571,6 @@
       </div>
     </footer>
 
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
     <script>
       const nav = document.getElementById("navbar");
       window.addEventListener(
