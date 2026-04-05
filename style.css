@@ -600,7 +600,7 @@
         border-radius: 16px;
         overflow: hidden;
         border: 0.5px solid rgba(247, 240, 230, 0.08);
-        background: var(--forest-2);
+        background: #4a3b1c; /* same as footer so no colour bleeds through */
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -609,7 +609,7 @@
         width: 100%;
         aspect-ratio: 1 / 1;
         overflow: hidden;
-        background: #243824;
+        background: #1e2e1e; /* neutral dark green for emoji cards */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -630,6 +630,7 @@
         justify-content: space-between;
         gap: 8px;
         flex-shrink: 0;
+        margin-top: auto; /* pin footer to bottom — no gap visible */
       }
       .menu-card-label {
         font-size: 10px;

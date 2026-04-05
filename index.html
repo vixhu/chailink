@@ -71,6 +71,17 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Preload all section files so the browser fetches them during HTML parsing,
+       before the JS loader runs — eliminates the serial round-trip delay -->
+  <link rel="preload" href="section/hero.html"     as="fetch" crossorigin />
+  <link rel="preload" href="section/trust.html"    as="fetch" crossorigin />
+  <link rel="preload" href="section/about.html"    as="fetch" crossorigin />
+  <link rel="preload" href="section/press.html"    as="fetch" crossorigin />
+  <link rel="preload" href="section/menu.html"     as="fetch" crossorigin />
+  <link rel="preload" href="section/specials.html" as="fetch" crossorigin />
+  <link rel="preload" href="section/gallery.html"  as="fetch" crossorigin />
+  <link rel="preload" href="section/contact.html"  as="fetch" crossorigin />
 </head>
 
 <body>
