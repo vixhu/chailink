@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- PRIMARY SEO -->
     <title>ChaiLink · Premium Indian Café & Restaurant | Luton</title>
     <meta
       name="description"
@@ -18,8 +16,6 @@
     <meta name="author" content="ChaiLink" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="canonical" href="https://www.chailinkrestocafe.co.uk/" />
-
-    <!-- OPEN GRAPH -->
     <meta property="og:type" content="restaurant" />
     <meta
       property="og:title"
@@ -36,8 +32,6 @@
     />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content="ChaiLink" />
-
-    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -51,12 +45,8 @@
       name="twitter:image"
       content="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=85"
     />
-
-    <!-- GEO / LOCAL SEO -->
     <meta name="geo.region" content="GB-ENG" />
     <meta name="geo.placename" content="London" />
-
-    <!-- STRUCTURED DATA: Restaurant -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -92,8 +82,6 @@
         "sameAs": ["https://www.instagram.com/chailink_restocafe/"]
       }
     </script>
-
-    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -116,7 +104,6 @@
         --muted: #7a6e62;
         --line: rgba(22, 39, 22, 0.12);
       }
-
       *,
       *::before,
       *::after {
@@ -127,17 +114,14 @@
       html {
         scroll-behavior: smooth;
         font-size: 16px;
-        /* Offset anchor scrolls so content never hides behind fixed navbar */
         scroll-padding-top: 80px;
       }
-
       body {
         font-family: "DM Sans", sans-serif;
         background: var(--cream);
         color: var(--ink);
         overflow-x: hidden;
       }
-
       h1,
       h2,
       h3,
@@ -145,7 +129,6 @@
       .serif {
         font-family: "Cormorant Garamond", serif;
       }
-
       body::before {
         content: "";
         position: fixed;
@@ -156,7 +139,7 @@
         opacity: 0.35;
       }
 
-      /* ── NAV ── */
+      /* NAV */
       nav {
         position: fixed;
         top: 0;
@@ -220,7 +203,6 @@
       .nav-reserve:hover {
         background: var(--amber-l) !important;
       }
-
       .hamburger {
         display: none;
         flex-direction: column;
@@ -269,7 +251,7 @@
         letter-spacing: 0.1em;
       }
 
-      /* ── HERO ── */
+      /* HERO */
       #hero {
         position: relative;
         min-height: 100vh;
@@ -469,7 +451,7 @@
         }
       }
 
-      /* ── SECTIONS ── */
+      /* SECTIONS */
       section {
         padding: 8rem 2rem;
       }
@@ -506,7 +488,7 @@
         margin: 1.5rem auto;
       }
 
-      /* ── TRUST BAR ── */
+      /* TRUST BAR */
       #trust {
         background: var(--forest);
         padding: 2.5rem 2rem;
@@ -544,9 +526,7 @@
         background: rgba(247, 240, 230, 0.12);
       }
 
-      /* ── ABOUT ── */
-      /* FIX: overflow hidden prevents the about image/accent from bleeding
-         above the section and behind the fixed navbar */
+      /* ABOUT */
       #about {
         background: var(--cream);
         overflow: hidden;
@@ -559,8 +539,6 @@
       }
       .about-img-wrap {
         position: relative;
-        /* FIX: padding-bottom gives room for the accent circle
-           so it doesn't overflow outside the section boundary */
         padding-bottom: 2.5rem;
       }
       .about-img {
@@ -607,7 +585,7 @@
         margin-bottom: 1.2rem;
       }
 
-      /* ── PRESS BAR ── */
+      /* PRESS BAR */
       #press {
         background: var(--cream-2);
         padding: 3.5rem 2rem;
@@ -649,7 +627,7 @@
         color: var(--muted);
       }
 
-      /* ── MENU ── */
+      /* MENU SECTION */
       #menu {
         background: var(--forest);
       }
@@ -697,10 +675,11 @@
         color: var(--cream);
       }
 
+      /* MENU GRID — portrait cards */
       .menu-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
       }
       .menu-cat {
         display: none;
@@ -709,79 +688,72 @@
         display: grid;
       }
 
+      /* MENU CARD PORTRAIT */
       .menu-card {
-        background: rgba(247, 240, 230, 0.03);
-        border: 1px solid rgba(247, 240, 230, 0.07);
-        padding: 1.5rem 2rem;
-        display: flex;
-        gap: 1.25rem;
-        align-items: flex-start;
-        transition:
-          background 0.3s,
-          border-color 0.3s;
-        cursor: default;
-      }
-      .menu-card:hover {
-        background: rgba(247, 240, 230, 0.06);
-        border-color: rgba(192, 125, 46, 0.25);
-      }
-      .menu-img {
-        width: 52px;
-        height: 52px;
-        flex-shrink: 0;
-        border-radius: 4px;
+        border-radius: 16px;
         overflow: hidden;
+        border: 0.5px solid rgba(247, 240, 230, 0.08);
+        background: var(--forest-2);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
       }
-
-      .menu-img img {
+      .menu-card-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background: #243824;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 56px;
+        flex-shrink: 0;
+      }
+      .menu-card-img img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* perfect for 1:1 images */
+        object-fit: cover;
         display: block;
       }
-      .menu-card h4 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1.1rem;
-        color: var(--cream);
-        margin-bottom: 0.35rem;
-        line-height: 1.25;
-        font-weight: 600;
+      .menu-card-footer {
+        background: #4a3b1c;
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        flex-shrink: 0;
       }
-      .menu-card p {
-        color: rgba(247, 240, 230, 0.48);
-        font-size: 0.8rem;
-        line-height: 1.65;
-        font-weight: 300;
-      }
-      .menu-price {
-        color: var(--amber-l);
-        font-size: 0.85rem;
-        font-weight: 600;
-        margin-top: 0.6rem;
-        letter-spacing: 0.04em;
-      }
-      .menu-tag {
-        display: inline-block;
-        font-size: 0.55rem;
-        letter-spacing: 0.2em;
+      .menu-card-label {
+        font-size: 10px;
+        font-weight: 500;
+        color: #c9a86c;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: var(--amber);
-        border: 1px solid rgba(192, 125, 46, 0.35);
-        padding: 0.15rem 0.55rem;
-        border-radius: 1px;
-        margin-bottom: 0.4rem;
+        margin: 0 0 3px;
+        font-family: "DM Sans", sans-serif;
+      }
+      .menu-card-name {
+        font-size: 17px;
+        font-weight: 500;
+        color: #fff;
+        margin: 0;
+        line-height: 1.25;
+        font-family: "Cormorant Garamond", serif;
+      }
+      .menu-card-price {
+        background: #c9a86c;
+        color: #2e2206;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 20px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        font-family: "DM Sans", sans-serif;
       }
 
-      /* price list style for items without description */
-      .menu-card.compact {
-        padding: 1rem 2rem;
-      }
-      .menu-card.compact h4 {
-        margin-bottom: 0;
-        font-size: 1rem;
-      }
-
-      /* ── SPECIALS ── */
+      /* SPECIALS */
       #specials {
         background: var(--cream-2);
       }
@@ -834,7 +806,7 @@
         font-weight: 300;
       }
 
-      /* ── GALLERY ── */
+      /* GALLERY */
       #gallery {
         background: var(--forest-2);
         padding-bottom: 6rem;
@@ -896,7 +868,7 @@
         margin-top: 3rem;
       }
 
-      /* ── CONTACT ── */
+      /* CONTACT */
       #contact {
         background: var(--forest);
       }
@@ -982,7 +954,6 @@
         border-color: var(--amber);
         color: #fff;
       }
-
       .map-panel {
         display: flex;
         flex-direction: column;
@@ -1040,6 +1011,7 @@
         background: var(--amber-l);
       }
 
+      /* FOOTER */
       footer {
         background: var(--ink);
         padding: 2.5rem 2rem;
@@ -1080,6 +1052,7 @@
         color: var(--amber-l);
       }
 
+      /* REVEAL */
       .reveal {
         opacity: 0;
         transform: translateY(24px);
@@ -1104,6 +1077,7 @@
         transition-delay: 0.45s;
       }
 
+      /* RESPONSIVE */
       @media (max-width: 960px) {
         nav {
           padding: 1.25rem 1.75rem;
@@ -1121,8 +1095,6 @@
         .about-img-wrap {
           max-width: 440px;
           margin: 0 auto;
-          /* FIX: keep the padding-bottom on mobile too so the accent
-             circle stays inside the section and doesn't overflow upward */
           padding-bottom: 2.5rem;
         }
         .specials-grid {
@@ -1153,7 +1125,7 @@
           grid-template-columns: 1fr 1fr;
         }
         .menu-grid {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
         }
         .hero-h1 {
           font-size: 3rem;
@@ -1161,7 +1133,6 @@
         .about-accent {
           width: 95px;
           height: 95px;
-          /* FIX: keep accent circle inside section on small phones */
           right: 0;
           bottom: 0;
         }
@@ -1176,6 +1147,16 @@
         }
         .nav-wordmark img {
           height: 50px;
+        }
+        .menu-card-name {
+          font-size: 14px;
+        }
+        .menu-card-footer {
+          padding: 10px 12px;
+        }
+        .menu-card-price {
+          font-size: 12px;
+          padding: 4px 9px;
         }
       }
     </style>
@@ -1425,7 +1406,7 @@
           </button>
         </div>
 
-        <!-- STARTERS -->
+        <!-- ═══ STARTERS ═══ -->
         <div
           class="menu-cat menu-grid active"
           id="cat-starters"
@@ -1433,143 +1414,218 @@
           aria-label="Starters"
         >
           <div class="menu-card">
-            <div class="menu-img">
+            <div class="menu-card-img">
               <img src="assets/starters/gobi65.png" alt="Gobi 65" />
             </div>
-            <div>
-              <h4>Gobi 65</h4>
-              <div class="menu-price">£5.99</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Gobi 65</p>
+              </div>
+              <span class="menu-card-price">£5.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🌶️</div>
-            <div>
-              <h4>Chilli Gobi</h4>
-              <div class="menu-price">£6.49</div>
+            <div class="menu-card-img" style="background: #2e1a0e">🌶️</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Chilli Gobi</p>
+              </div>
+              <span class="menu-card-price">£6.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🧀</div>
-            <div>
-              <h4>Paneer Chilli</h4>
-              <div class="menu-price">£6.49</div>
+            <div class="menu-card-img" style="background: #2a1a2a">🧀</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Paneer Chilli</p>
+              </div>
+              <span class="menu-card-price">£6.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍟</div>
-            <div>
-              <h4>Fries</h4>
-              <div class="menu-price">£2.49</div>
+            <div class="menu-card-img" style="background: #2a2200">🍟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Fries</p>
+              </div>
+              <span class="menu-card-price">£2.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐟</div>
-            <div>
-              <h4>Natholi Fry</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Seafood</p>
+                <p class="menu-card-name">Natholi Fry</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <h4>Alfahm Half (Peri-Peri)</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Peri-Peri</p>
+                <p class="menu-card-name">Alfahm Half</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <h4>Alfahm Half (Kaanthari, Dynamite)</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Kaanthari · Dynamite</p>
+                <p class="menu-card-name">Alfahm Half</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🦐</div>
-            <div>
-              <h4>Prawn Roast Coconut Milk</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🦐</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Seafood</p>
+                <p class="menu-card-name">Prawn Roast Coconut Milk</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐠</div>
-            <div>
-              <h4>Matthi (Fish Fry)</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐠</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Fish Fry</p>
+                <p class="menu-card-name">Matthi</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐡</div>
-            <div>
-              <h4>Avoli (Fish Fry)</h4>
-              <div class="menu-price">£9.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐡</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Fish Fry</p>
+                <p class="menu-card-name">Avoli</p>
+              </div>
+              <span class="menu-card-price">£9.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🦑</div>
-            <div>
-              <h4>Kallumakkayi (Missiles Fry)</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1a1a2e">🦑</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Seafood</p>
+                <p class="menu-card-name">Kallumakkayi Fry</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍌</div>
-            <div>
-              <h4>Banana Fry – Beef</h4>
-              <div class="menu-price">£8.49</div>
+            <div class="menu-card-img" style="background: #2a2200">🍌</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Banana Fry – Beef</p>
+              </div>
+              <span class="menu-card-price">£8.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐟</div>
-            <div>
-              <h4>Fish Tawa</h4>
-              <div class="menu-price">£13.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Seafood</p>
+                <p class="menu-card-name">Fish Tawa</p>
+              </div>
+              <span class="menu-card-price">£13.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐠</div>
-            <div>
-              <h4>Fish Pollichathu</h4>
-              <div class="menu-price">£14.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐠</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Chef's Pick</p>
+                <p class="menu-card-name">Fish Pollichathu</p>
+              </div>
+              <span class="menu-card-price">£14.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🌶️</div>
-            <div>
-              <h4>Kaanthari Fish Tawa</h4>
-              <div class="menu-price">£14.99</div>
+            <div class="menu-card-img" style="background: #2e1a0e">🌶️</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Kaanthari</p>
+                <p class="menu-card-name">Kaanthari Fish Tawa</p>
+              </div>
+              <span class="menu-card-price">£14.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐟</div>
-            <div>
-              <h4>Ayala Fry (Fish)</h4>
-              <div class="menu-price">£4.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Fish Fry</p>
+                <p class="menu-card-name">Ayala Fry</p>
+              </div>
+              <span class="menu-card-price">£4.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <h4>Chicken 65</h4>
-              <div class="menu-price">£6.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Chicken 65</p>
+              </div>
+              <span class="menu-card-price">£6.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🌶️</div>
-            <div>
-              <h4>Chilli Chicken</h4>
-              <div class="menu-price">£6.99</div>
+            <div class="menu-card-img" style="background: #2e1a0e">🌶️</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Chilli Chicken</p>
+              </div>
+              <span class="menu-card-price">£6.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <h4>Beef Dry Fry</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Starter</p>
+                <p class="menu-card-name">Beef Dry Fry</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
         </div>
 
-        <!-- MANDI -->
+        <!-- ═══ MANDI ═══ -->
         <div
           class="menu-cat menu-grid"
           id="cat-mandi"
@@ -1577,66 +1633,95 @@
           aria-label="Mandi"
         >
           <div class="menu-card">
-            <div class="menu-emoji">🍚</div>
-            <div>
-              <div class="menu-tag">Pure Mandi Delight</div>
-              <h4>Chicken Mandi</h4>
-              <p>Aromatic rice with slow-cooked, smoky chicken.</p>
-              <div class="menu-price">£7.49</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Pure Mandi Delight</p>
+                <p class="menu-card-name">Chicken Mandi</p>
+              </div>
+              <span class="menu-card-price">£7.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🌶️</div>
-            <div>
-              <h4>Peri-Peri Chicken Mandi</h4>
-              <div class="menu-price">£8.49</div>
+            <div class="menu-card-img" style="background: #2e1a0e">🌶️</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Peri-Peri</p>
+                <p class="menu-card-name">Peri-Peri Chicken Mandi</p>
+              </div>
+              <span class="menu-card-price">£8.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">💥</div>
-            <div>
-              <h4>Dynamite Chicken Mandi</h4>
-              <div class="menu-price">£8.49</div>
+            <div class="menu-card-img" style="background: #2e0e0e">💥</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Dynamite</p>
+                <p class="menu-card-name">Dynamite Chicken Mandi</p>
+              </div>
+              <span class="menu-card-price">£8.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🔥</div>
-            <div>
-              <h4>Kanthari Chicken Mandi</h4>
-              <div class="menu-price">£8.49</div>
+            <div class="menu-card-img" style="background: #2e0e0e">🔥</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Kaanthari</p>
+                <p class="menu-card-name">Kanthari Chicken Mandi</p>
+              </div>
+              <span class="menu-card-price">£8.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <h4>Beef Mandi</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mandi</p>
+                <p class="menu-card-name">Beef Mandi</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐑</div>
-            <div>
-              <h4>Mutton Mandi</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🐑</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mandi</p>
+                <p class="menu-card-name">Mutton Mandi</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐟</div>
-            <div>
-              <h4>Fish Mandi</h4>
-              <div class="menu-price">£14.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mandi</p>
+                <p class="menu-card-name">Fish Mandi</p>
+              </div>
+              <span class="menu-card-price">£14.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍖</div>
-            <div>
-              <h4>Lamb Shank Mandi</h4>
-              <div class="menu-price">£13.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🍖</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mandi</p>
+                <p class="menu-card-name">Lamb Shank Mandi</p>
+              </div>
+              <span class="menu-card-price">£13.99</span>
             </div>
           </div>
         </div>
 
-        <!-- POROTTA -->
+        <!-- ═══ POROTTA ═══ -->
         <div
           class="menu-cat menu-grid"
           id="cat-porotta"
@@ -1644,56 +1729,79 @@
           aria-label="Porotta"
         >
           <div class="menu-card">
-            <div class="menu-emoji">🫓</div>
-            <div>
-              <h4>Porotta with Chicken</h4>
-              <div class="menu-price">£9.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🫓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Porotta</p>
+                <p class="menu-card-name">Porotta with Chicken</p>
+              </div>
+              <span class="menu-card-price">£9.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🫓</div>
-            <div>
-              <h4>Porotta with Mutton</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🫓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Porotta</p>
+                <p class="menu-card-name">Porotta with Mutton</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🫓</div>
-            <div>
-              <h4>Porotta with Beef</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🫓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Porotta</p>
+                <p class="menu-card-name">Porotta with Beef</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">✨</div>
-            <div>
-              <div class="menu-tag">Special Porotta</div>
-              <h4>Kizhi Porotta</h4>
-              <p>Chicken · £10.99 &nbsp;/&nbsp; Beef · £11.99</p>
+            <div class="menu-card-img" style="background: #2a1a2a">✨</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">
+                  Special · Chicken £10.99 / Beef £11.99
+                </p>
+                <p class="menu-card-name">Kizhi Porotta</p>
+              </div>
+              <span class="menu-card-price">£10.99+</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥛</div>
-            <div>
-              <div class="menu-tag">Special Porotta</div>
-              <h4>Paal Porotta</h4>
-              <p>Chicken · £11.99 &nbsp;/&nbsp; Beef · £12.49</p>
+            <div class="menu-card-img" style="background: #1a0e2a">🥛</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">
+                  Special · Chicken £11.99 / Beef £12.49
+                </p>
+                <p class="menu-card-name">Paal Porotta</p>
+              </div>
+              <span class="menu-card-price">£11.99+</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥚</div>
-            <div>
-              <div class="menu-tag">Special Porotta</div>
-              <h4>Kothu Porotta</h4>
-              <p>
-                Egg · £6.99 &nbsp;/&nbsp; Chicken · £7.99 &nbsp;/&nbsp; Beef ·
-                £9.99 &nbsp;/&nbsp; Mutton · £9.99
-              </p>
+            <div class="menu-card-img" style="background: #2a2200">🥚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">
+                  Special · Egg £6.99 / Chicken £7.99 / Beef £9.99
+                </p>
+                <p class="menu-card-name">Kothu Porotta</p>
+              </div>
+              <span class="menu-card-price">£6.99+</span>
             </div>
           </div>
         </div>
 
-        <!-- BIRIYANI -->
+        <!-- ═══ BIRIYANI ═══ -->
         <div
           class="menu-cat menu-grid"
           id="cat-biriyani"
@@ -1701,72 +1809,106 @@
           aria-label="Biriyani"
         >
           <div class="menu-card">
-            <div class="menu-emoji">🥚</div>
-            <div>
-              <div class="menu-tag">Fiery, Fragrant &amp; Festive</div>
-              <h4>Egg Biriyani</h4>
-              <div class="menu-price">£5.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🥚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Fiery, Fragrant &amp; Festive</p>
+                <p class="menu-card-name">Egg Biriyani</p>
+              </div>
+              <span class="menu-card-price">£5.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <h4>Chicken Biriyani</h4>
-              <div class="menu-price">£7.49</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Biriyani</p>
+                <p class="menu-card-name">Chicken Biriyani</p>
+              </div>
+              <span class="menu-card-price">£7.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐑</div>
-            <div>
-              <h4>Mutton Biriyani</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🐑</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Biriyani</p>
+                <p class="menu-card-name">Mutton Biriyani</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐡</div>
-            <div>
-              <h4>Avoli Biriyani</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐡</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Biriyani</p>
+                <p class="menu-card-name">Avoli Biriyani</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <h4>Beef Biriyani</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Biriyani</p>
+                <p class="menu-card-name">Beef Biriyani</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <h4>Chicken Kizhi Biriyani</h4>
-              <div class="menu-price">£8.49</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Kizhi</p>
+                <p class="menu-card-name">Chicken Kizhi Biriyani</p>
+              </div>
+              <span class="menu-card-price">£8.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐑</div>
-            <div>
-              <h4>Mutton Kizhi Biriyani</h4>
-              <div class="menu-price">£9.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🐑</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Kizhi</p>
+                <p class="menu-card-name">Mutton Kizhi Biriyani</p>
+              </div>
+              <span class="menu-card-price">£9.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <h4>Beef Kizhi Biriyani</h4>
-              <div class="menu-price">£9.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Kizhi</p>
+                <p class="menu-card-name">Beef Kizhi Biriyani</p>
+              </div>
+              <span class="menu-card-price">£9.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🦐</div>
-            <div>
-              <h4>Prawn Biriyani</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🦐</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Biriyani</p>
+                <p class="menu-card-name">Prawn Biriyani</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
         </div>
 
-        <!-- RICE & CURRY -->
+        <!-- ═══ RICE & CURRY ═══ -->
         <div
           class="menu-cat menu-grid"
           id="cat-rice"
@@ -1774,154 +1916,205 @@
           aria-label="Rice and Curry"
         >
           <div class="menu-card">
-            <div class="menu-emoji">🥥</div>
-            <div>
-              <div class="menu-tag">Paal Kappa</div>
-              <h4>Paal Kappa Fish</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🥥</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Paal Kappa</p>
+                <p class="menu-card-name">Paal Kappa Fish</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥥</div>
-            <div>
-              <div class="menu-tag">Paal Kappa</div>
-              <h4>Paal Kappa Beef</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🥥</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Paal Kappa</p>
+                <p class="menu-card-name">Paal Kappa Beef</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍚</div>
-            <div>
-              <div class="menu-tag">Ghee Rice</div>
-              <h4>Chicken Ghee Rice</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Ghee Rice</p>
+                <p class="menu-card-name">Chicken Ghee Rice</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍚</div>
-            <div>
-              <div class="menu-tag">Ghee Rice</div>
-              <h4>Beef Ghee Rice</h4>
-              <div class="menu-price">£11.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Ghee Rice</p>
+                <p class="menu-card-name">Beef Ghee Rice</p>
+              </div>
+              <span class="menu-card-price">£11.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍚</div>
-            <div>
-              <div class="menu-tag">Ghee Rice</div>
-              <h4>Mutton Ghee Rice</h4>
-              <div class="menu-price">£11.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Ghee Rice</p>
+                <p class="menu-card-name">Mutton Ghee Rice</p>
+              </div>
+              <span class="menu-card-price">£11.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍛</div>
-            <div>
-              <div class="menu-tag">Curry</div>
-              <h4>Sambar</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍛</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Curry</p>
+                <p class="menu-card-name">Sambar</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🧀</div>
-            <div>
-              <div class="menu-tag">Curry</div>
-              <h4>Paneer Butter Masala</h4>
-              <div class="menu-price">£6.99</div>
+            <div class="menu-card-img" style="background: #2a1a2a">🧀</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Curry</p>
+                <p class="menu-card-name">Paneer Butter Masala</p>
+              </div>
+              <span class="menu-card-price">£6.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐟</div>
-            <div>
-              <div class="menu-tag">Curry</div>
-              <h4>Fish Curry</h4>
-              <div class="menu-price">£7.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Curry</p>
+                <p class="menu-card-name">Fish Curry</p>
+              </div>
+              <span class="menu-card-price">£7.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <div class="menu-tag">Curry</div>
-              <h4>Beef Curry</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Curry</p>
+                <p class="menu-card-name">Beef Curry</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <div class="menu-tag">Curry</div>
-              <h4>Malabar Chicken Curry</h4>
-              <div class="menu-price">£6.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Curry</p>
+                <p class="menu-card-name">Malabar Chicken Curry</p>
+              </div>
+              <span class="menu-card-price">£6.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🧈</div>
-            <div>
-              <div class="menu-tag">Curry</div>
-              <h4>Butter Chicken</h4>
-              <div class="menu-price">£6.99</div>
+            <div class="menu-card-img" style="background: #2e0e1a">🧈</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Curry</p>
+                <p class="menu-card-name">Butter Chicken</p>
+              </div>
+              <span class="menu-card-price">£6.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐑</div>
-            <div>
-              <div class="menu-tag">Curry</div>
-              <h4>Mutton Curry</h4>
-              <div class="menu-price">£8.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🐑</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Curry</p>
+                <p class="menu-card-name">Mutton Curry</p>
+              </div>
+              <span class="menu-card-price">£8.99</span>
             </div>
           </div>
-          <!-- Special Meals -->
+
           <div class="menu-card">
-            <div class="menu-emoji">🌿</div>
-            <div>
-              <div class="menu-tag">Special Meals</div>
-              <h4>Veg Meals</h4>
-              <div class="menu-price">£7.99</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🌿</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Special Meals</p>
+                <p class="menu-card-name">Veg Meals</p>
+              </div>
+              <span class="menu-card-price">£7.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍚</div>
-            <div>
-              <div class="menu-tag">Special Meals</div>
-              <h4>Pothi Choru</h4>
-              <p>Homely beef choru with cool moru — comfort on a plate.</p>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Special Meals</p>
+                <p class="menu-card-name">Pothi Choru</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍚</div>
-            <div>
-              <div class="menu-tag">Special Meals</div>
-              <h4>Chatti Choru</h4>
-              <div class="menu-price">£11.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Special Meals</p>
+                <p class="menu-card-name">Chatti Choru</p>
+              </div>
+              <span class="menu-card-price">£11.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <div class="menu-tag">Special Meals</div>
-              <h4>Beef – Choru – Moru</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Special Meals</p>
+                <p class="menu-card-name">Beef – Choru – Moru</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐟</div>
-            <div>
-              <div class="menu-tag">Special Meals</div>
-              <h4>Fish – Choru – Moru</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Special Meals</p>
+                <p class="menu-card-name">Fish – Choru – Moru</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <div class="menu-tag">Special Meals</div>
-              <h4>Chicken Curry – Choru – Moru</h4>
-              <div class="menu-price">£9.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Special Meals</p>
+                <p class="menu-card-name">Chicken Curry – Choru – Moru</p>
+              </div>
+              <span class="menu-card-price">£9.99</span>
             </div>
           </div>
         </div>
 
-        <!-- APPAM & MORE -->
+        <!-- ═══ APPAM & MORE ═══ -->
         <div
           class="menu-cat menu-grid"
           id="cat-appam"
@@ -1929,285 +2122,382 @@
           aria-label="Appam and More"
         >
           <div class="menu-card">
-            <div class="menu-emoji">🥞</div>
-            <div>
-              <div class="menu-tag">Appam</div>
-              <h4>Appam + Chicken Curry</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🥞</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Appam</p>
+                <p class="menu-card-name">Appam + Chicken Curry</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥞</div>
-            <div>
-              <div class="menu-tag">Appam</div>
-              <h4>Appam + Beef Curry</h4>
-              <div class="menu-price">£11.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥞</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Appam</p>
+                <p class="menu-card-name">Appam + Beef Curry</p>
+              </div>
+              <span class="menu-card-price">£11.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥞</div>
-            <div>
-              <div class="menu-tag">Appam</div>
-              <h4>Appam + Mutton Curry</h4>
-              <div class="menu-price">£11.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥞</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Appam</p>
+                <p class="menu-card-name">Appam + Mutton Curry</p>
+              </div>
+              <span class="menu-card-price">£11.99</span>
             </div>
           </div>
-          <!-- Platter -->
+
           <div class="menu-card">
-            <div class="menu-emoji">🍽️</div>
-            <div>
-              <div class="menu-tag">Platter · Serves 3–4</div>
-              <h4>Mandi Platter</h4>
-              <p>A spread to remember, for tables that love to share.</p>
-              <div class="menu-price">£27.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍽️</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Platter · Serves 3–4</p>
+                <p class="menu-card-name">Mandi Platter</p>
+              </div>
+              <span class="menu-card-price">£27.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <div class="menu-tag">Platter</div>
-              <h4>Beef Platter</h4>
-              <div class="menu-price">£35.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Platter</p>
+                <p class="menu-card-name">Beef Platter</p>
+              </div>
+              <span class="menu-card-price">£35.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🐟</div>
-            <div>
-              <div class="menu-tag">Platter</div>
-              <h4>Fish Platter</h4>
-              <div class="menu-price">£57.99</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🐟</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Platter</p>
+                <p class="menu-card-name">Fish Platter</p>
+              </div>
+              <span class="menu-card-price">£57.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍽️</div>
-            <div>
-              <div class="menu-tag">Platter</div>
-              <h4>Mixed Platter</h4>
-              <div class="menu-price">£49.99</div>
+            <div class="menu-card-img" style="background: #2a1a2a">🍽️</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Platter</p>
+                <p class="menu-card-name">Mixed Platter</p>
+              </div>
+              <span class="menu-card-price">£49.99</span>
             </div>
           </div>
-          <!-- Extras -->
+
           <div class="menu-card">
-            <div class="menu-emoji">➕</div>
-            <div>
-              <div class="menu-tag">Extras</div>
-              <h4>Appam</h4>
-              <div class="menu-price">£1.50</div>
+            <div class="menu-card-img" style="background: #2a2200">🫓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Extras</p>
+                <p class="menu-card-name">Appam</p>
+              </div>
+              <span class="menu-card-price">£1.50</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">➕</div>
-            <div>
-              <div class="menu-tag">Extras</div>
-              <h4>Naan</h4>
-              <div class="menu-price">£1.50</div>
+            <div class="menu-card-img" style="background: #2a2200">🫓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Extras</p>
+                <p class="menu-card-name">Naan</p>
+              </div>
+              <span class="menu-card-price">£1.50</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">➕</div>
-            <div>
-              <div class="menu-tag">Extras</div>
-              <h4>Poratta</h4>
-              <div class="menu-price">£1.50</div>
+            <div class="menu-card-img" style="background: #2a2200">🫓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Extras</p>
+                <p class="menu-card-name">Porotta</p>
+              </div>
+              <span class="menu-card-price">£1.50</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">➕</div>
-            <div>
-              <div class="menu-tag">Extras</div>
-              <h4>Gheerice</h4>
-              <div class="menu-price">£4.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Extras</p>
+                <p class="menu-card-name">Ghee Rice</p>
+              </div>
+              <span class="menu-card-price">£4.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">➕</div>
-            <div>
-              <div class="menu-tag">Extras</div>
-              <h4>Mandirice</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Extras</p>
+                <p class="menu-card-name">Mandi Rice</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">➕</div>
-            <div>
-              <div class="menu-tag">Extras</div>
-              <h4>Biriyani Rice</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍚</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Extras</p>
+                <p class="menu-card-name">Biriyani Rice</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
         </div>
 
-        <!-- DRINKS -->
+        <!-- ═══ DRINKS ═══ -->
         <div
           class="menu-cat menu-grid"
           id="cat-drinks"
           role="tabpanel"
           aria-label="Drinks"
         >
-          <!-- Hot Drinks -->
           <div class="menu-card">
-            <div class="menu-emoji">☕</div>
-            <div>
-              <div class="menu-tag">Hot Drinks</div>
-              <h4>Tea</h4>
-              <div class="menu-price">£2.49</div>
+            <div class="menu-card-img" style="background: #1e1410">☕</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Hot Drinks</p>
+                <p class="menu-card-name">Tea</p>
+              </div>
+              <span class="menu-card-price">£2.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">☕</div>
-            <div>
-              <div class="menu-tag">Hot Drinks</div>
-              <h4>Coffee</h4>
-              <div class="menu-price">£2.49</div>
+            <div class="menu-card-img" style="background: #1e1410">☕</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Hot Drinks</p>
+                <p class="menu-card-name">Coffee</p>
+              </div>
+              <span class="menu-card-price">£2.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥤</div>
-            <div>
-              <div class="menu-tag">Hot Drinks</div>
-              <h4>Boost</h4>
-              <div class="menu-price">£2.49</div>
+            <div class="menu-card-img" style="background: #0d1e2a">🥤</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Hot Drinks</p>
+                <p class="menu-card-name">Boost</p>
+              </div>
+              <span class="menu-card-price">£2.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥛</div>
-            <div>
-              <div class="menu-tag">Hot Drinks</div>
-              <h4>Horlicks</h4>
-              <div class="menu-price">£2.49</div>
+            <div class="menu-card-img" style="background: #1a0e2a">🥛</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Hot Drinks</p>
+                <p class="menu-card-name">Horlicks</p>
+              </div>
+              <span class="menu-card-price">£2.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍋</div>
-            <div>
-              <div class="menu-tag">Hot Drinks</div>
-              <h4>Lemon Tea</h4>
-              <div class="menu-price">£1.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍋</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Hot Drinks</p>
+                <p class="menu-card-name">Lemon Tea</p>
+              </div>
+              <span class="menu-card-price">£1.99</span>
             </div>
           </div>
-          <!-- Mocktails -->
+
           <div class="menu-card">
-            <div class="menu-emoji">🍹</div>
-            <div>
-              <div class="menu-tag">Mocktails</div>
-              <h4>Classic Lime Mojito</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🍹</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mocktail</p>
+                <p class="menu-card-name">Classic Lime Mojito</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍹</div>
-            <div>
-              <div class="menu-tag">Mocktails</div>
-              <h4>Raspberry Mojito</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2e0e1a">🍹</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mocktail</p>
+                <p class="menu-card-name">Raspberry Mojito</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥭</div>
-            <div>
-              <div class="menu-tag">Mocktails</div>
-              <h4>Mango Mojito</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🥭</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mocktail</p>
+                <p class="menu-card-name">Mango Mojito</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🫐</div>
-            <div>
-              <div class="menu-tag">Mocktails</div>
-              <h4>Blue Lagoon Mojito</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #1a1a2e">🫐</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mocktail</p>
+                <p class="menu-card-name">Blue Lagoon Mojito</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍈</div>
-            <div>
-              <div class="menu-tag">Mocktails</div>
-              <h4>Passion Fruit Mojito</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍈</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mocktail</p>
+                <p class="menu-card-name">Passion Fruit Mojito</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍓</div>
-            <div>
-              <div class="menu-tag">Mocktails</div>
-              <h4>Strawberry Cooler</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2e0e1a">🍓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mocktail</p>
+                <p class="menu-card-name">Strawberry Cooler</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍍</div>
-            <div>
-              <div class="menu-tag">Mocktails</div>
-              <h4>Pina Colada</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🍍</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Mocktail</p>
+                <p class="menu-card-name">Pina Colada</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
-          <!-- Milkshakes -->
+
           <div class="menu-card">
-            <div class="menu-emoji">🥭</div>
-            <div>
-              <div class="menu-tag">Milkshakes · £4.99 each</div>
-              <h4>Mango / Banana / Oreo / Snickers / Strawberry</h4>
+            <div class="menu-card-img" style="background: #2a1e00">🥭</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Milkshake</p>
+                <p class="menu-card-name">
+                  Mango / Banana / Oreo / Snickers / Strawberry
+                </p>
+              </div>
+              <span class="menu-card-price">£4.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥑</div>
-            <div>
-              <div class="menu-tag">Milkshakes · £4.99 each</div>
-              <h4>Avocado / KitKat / Pistachio / Sharjah / Chikku</h4>
+            <div class="menu-card-img" style="background: #1a0e2a">🥑</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Milkshake</p>
+                <p class="menu-card-name">
+                  Avocado / KitKat / Pistachio / Sharjah / Chikku
+                </p>
+              </div>
+              <span class="menu-card-price">£4.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥥</div>
-            <div>
-              <div class="menu-tag">Milkshakes · £4.99 each</div>
-              <h4>Tender Coconut / Kannur Cocktail</h4>
+            <div class="menu-card-img" style="background: #0d2a1a">🥥</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Milkshake</p>
+                <p class="menu-card-name">Tender Coconut / Kannur Cocktail</p>
+              </div>
+              <span class="menu-card-price">£4.99</span>
             </div>
           </div>
-          <!-- Juices & Desserts -->
+
           <div class="menu-card">
-            <div class="menu-emoji">🍋</div>
-            <div>
-              <div class="menu-tag">Juices &amp; Desserts</div>
-              <h4>Fresh Lime Juice</h4>
-              <div class="menu-price">£2.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍋</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Juice</p>
+                <p class="menu-card-name">Fresh Lime Juice</p>
+              </div>
+              <span class="menu-card-price">£2.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍊</div>
-            <div>
-              <div class="menu-tag">Juices &amp; Desserts</div>
-              <h4>Orange Juice</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍊</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Juice</p>
+                <p class="menu-card-name">Orange Juice</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🌿</div>
-            <div>
-              <div class="menu-tag">Juices &amp; Desserts</div>
-              <h4>Mint Lime</h4>
-              <div class="menu-price">£3.49</div>
+            <div class="menu-card-img" style="background: #0d2a1a">🌿</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Juice</p>
+                <p class="menu-card-name">Mint Lime</p>
+              </div>
+              <span class="menu-card-price">£3.49</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍎</div>
-            <div>
-              <div class="menu-tag">Juices &amp; Desserts</div>
-              <h4>Apple Juice</h4>
-              <div class="menu-price">£3.99</div>
+            <div class="menu-card-img" style="background: #2e0e1a">🍎</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Juice</p>
+                <p class="menu-card-name">Apple Juice</p>
+              </div>
+              <span class="menu-card-price">£3.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍮</div>
-            <div>
-              <div class="menu-tag">Juices &amp; Desserts</div>
-              <h4>Gulab Jamun with Ice Cream</h4>
-              <div class="menu-price">£4.99</div>
+            <div class="menu-card-img" style="background: #2a2200">🍮</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Dessert</p>
+                <p class="menu-card-name">Gulab Jamun with Ice Cream</p>
+              </div>
+              <span class="menu-card-price">£4.99</span>
             </div>
           </div>
         </div>
 
-        <!-- CHAI LINK SPECIAL -->
+        <!-- ═══ CHAI LINK SPECIAL ═══ -->
         <div
           class="menu-cat menu-grid"
           id="cat-specials-tab"
@@ -2215,35 +2505,46 @@
           aria-label="Chai Link Special"
         >
           <div class="menu-card">
-            <div class="menu-emoji">🌸</div>
-            <div>
-              <div class="menu-tag">Seasonal</div>
-              <h4>Madhooth (Seasonal)</h4>
-              <div class="menu-price">£7.99</div>
+            <div class="menu-card-img" style="background: #2e0e1a">🌸</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Seasonal</p>
+                <p class="menu-card-name">Madhooth</p>
+              </div>
+              <span class="menu-card-price">£7.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🫓</div>
-            <div>
-              <div class="menu-tag">Chai Link Special</div>
-              <h4>Pathiri Beef</h4>
-              <div class="menu-price">£11.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🫓</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Chai Link Special</p>
+                <p class="menu-card-name">Pathiri Beef</p>
+              </div>
+              <span class="menu-card-price">£11.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🍗</div>
-            <div>
-              <div class="menu-tag">Chai Link Special</div>
-              <h4>Idiyappam Chicken</h4>
-              <div class="menu-price">£10.99</div>
+            <div class="menu-card-img" style="background: #2a1e00">🍗</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Chai Link Special</p>
+                <p class="menu-card-name">Idiyappam Chicken</p>
+              </div>
+              <span class="menu-card-price">£10.99</span>
             </div>
           </div>
+
           <div class="menu-card">
-            <div class="menu-emoji">🥩</div>
-            <div>
-              <div class="menu-tag">Chai Link Special</div>
-              <h4>Idiyappam Beef</h4>
-              <div class="menu-price">£11.99</div>
+            <div class="menu-card-img" style="background: #1e1410">🥩</div>
+            <div class="menu-card-footer">
+              <div>
+                <p class="menu-card-label">Chai Link Special</p>
+                <p class="menu-card-name">Idiyappam Beef</p>
+              </div>
+              <span class="menu-card-price">£11.99</span>
             </div>
           </div>
         </div>
@@ -2414,9 +2715,8 @@
             target="_blank"
             rel="noopener noreferrer"
             class="btn-ghost insta-btn"
+            >Follow us on Instagram &nbsp; @chailink_restocafe</a
           >
-            Follow us on Instagram &nbsp; @chailink_restocafe
-          </a>
         </div>
       </div>
     </section>
@@ -2437,7 +2737,6 @@
               accommodate dietary requirements, private events, and bespoke chai
               flights.
             </p>
-
             <div class="c-item reveal delay-2">
               <div class="c-icon">📞</div>
               <div>
@@ -2472,7 +2771,6 @@
                 <div class="c-val">Daily · 12:00 PM – 12:00 AM</div>
               </div>
             </div>
-
             <div class="social-row reveal delay-4">
               <a
                 href="https://www.instagram.com/chailink_restocafe/"
@@ -2516,7 +2814,6 @@
               </a>
             </div>
           </div>
-
           <div class="map-panel reveal delay-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.0933680899357!2d-0.4119151!3d51.8775082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876497de01332fb%3A0x96f1836e0ea0cd2b!2sChai%20Link%20Resto%20Cafe!5e0!3m2!1sen!2sin!4v1775091522391!5m2!1sen!2sin"
@@ -2526,12 +2823,10 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="ChaiLink Resto Cafe on Google Maps"
-            >
-            </iframe>
+            ></iframe>
             <div class="map-footer">
               <div class="map-footer-addr">
-                <strong>Chai Link Resto Cafe</strong>
-                38 Park St, Luton LU1 3ET
+                <strong>Chai Link Resto Cafe</strong>38 Park St, Luton LU1 3ET
               </div>
               <a
                 href="https://maps.google.com/?q=51.8775082,-0.4119151"
@@ -2568,15 +2863,15 @@
         </p>
         <p class="footer-legal" style="margin-top: 0.5rem; opacity: 0.8">
           38 Park St, Luton LU1 3ET &nbsp;·&nbsp; 07880 679498<br />
-          <span style="font-size: 0.85rem">
-            Crafted with ❤️ by
+          <span style="font-size: 0.85rem"
+            >Crafted with ❤️ by
             <a
               href="https://wa.me/919188070526"
               target="_blank"
               style="color: #b8953a; text-decoration: none; font-weight: 500"
               >Vichu</a
-            >
-          </span>
+            ></span
+          >
         </p>
       </div>
     </footer>
@@ -2626,9 +2921,6 @@
       );
       reveals.forEach((el) => observer.observe(el));
 
-      // ── iOS-SAFE ANCHOR SCROLL ──
-      // Manually intercept anchor clicks and offset by navbar height.
-      // Fixes content scrolling behind the fixed navbar on iPhone Safari.
       const NAV_HEIGHT = 80;
       document.querySelectorAll('a[href^="#"]').forEach(function (link) {
         link.addEventListener("click", function (e) {
