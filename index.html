@@ -114,15 +114,56 @@
     <a href="#contact" onclick="toggleMenu()">Visit Us</a>
   </div>
 
-  <!-- SECTIONS: each is fetched from its section/ file at page load -->
-  <div id="section-hero"></div>
-  <div id="section-trust"></div>
-  <div id="section-about"></div>
-  <div id="section-press"></div>
-  <div id="section-menu"></div>
-  <div id="section-specials"></div>
-  <div id="section-gallery"></div>
-  <div id="section-contact"></div>
+    <!-- HERO (Inlined for Performance) -->
+    <section id="hero" aria-label="Welcome to ChaiLink">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Luton · Est. 2023</span>
+        <h1 class="hero-h1">Where the Spice<br />Route Meets <em>Luton</em></h1>
+        <p class="hero-sub">
+          Artisan chai, Malabar coastal plates, and single-origin coffee —
+          served with the refinement London expects and the warmth Kerala never
+          forgets.
+        </p>
+        <div class="hero-ctas">
+          <a href="#menu" class="btn-primary">Explore the Menu</a>
+          <a
+            href="https://wa.me/447880679498?text=Hi%20ChaiLink%2C%20I%20would%20like%20to%20book%20a%20table.%20Please%20let%20me%20know%20availability."
+            target="_blank"
+            class="btn-ghost"
+            >Reserve a Table</a
+          >
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- TRUST BAR (Inlined for Performance) -->
+    <section id="trust" aria-label="Awards and recognition">
+      <div class="trust-inner">
+        <div class="trust-item"><strong>4.9 ★</strong>Google Reviews</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item"><strong>£££</strong>Fine Casual Dining</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <strong>Top 10</strong>Indian Cafés - Time Out
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item"><strong>Open</strong>Daily · 12 PM – 12 AM</div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC SECTIONS: Fetched in background after page load -->
+    <div id="section-about"></div>
+    <div id="section-press"></div>
+    <div id="section-menu"></div>
+    <div id="section-specials"></div>
+    <div id="section-gallery"></div>
+    <div id="section-contact"></div>
 
   <!-- FOOTER -->
   <footer role="contentinfo">
@@ -152,39 +193,37 @@
          Fetches each section/*.html file and replaces its placeholder <div>.
          script.js is loaded AFTER all sections are in the DOM so the
          IntersectionObserver (reveal) and smooth-scroll logic bind correctly. -->
-  <script>
-    (async function loadSections() {
-      const sections = [
-        { id: 'section-hero', file: 'section/hero.html' },
-        { id: 'section-trust', file: 'section/trust.html' },
-        { id: 'section-about', file: 'section/about.html' },
-        { id: 'section-press', file: 'section/press.html' },
-        { id: 'section-menu', file: 'section/menu.html' },
-        { id: 'section-specials', file: 'section/specials.html' },
-        { id: 'section-gallery', file: 'section/gallery.html' },
-        { id: 'section-contact', file: 'section/contact.html' },
-      ];
+    <script>
+      (async function loadSections() {
+        const sections = [
+          { id: 'section-about',    file: 'section/about.html' },
+          { id: 'section-press',    file: 'section/press.html' },
+          { id: 'section-menu',     file: 'section/menu.html' },
+          { id: 'section-specials', file: 'section/specials.html' },
+          { id: 'section-gallery',  file: 'section/gallery.html' },
+          { id: 'section-contact',  file: 'section/contact.html' },
+        ];
 
-      await Promise.all(
-        sections.map(async ({ id, file }) => {
-          try {
-            const res = await fetch(file);
-            if (!res.ok) throw new Error(res.statusText);
-            const html = await res.text();
-            const el = document.getElementById(id);
-            if (el) el.outerHTML = html;
-          } catch (e) {
-            console.warn('Could not load section:', file, e);
-          }
-        })
-      );
+        await Promise.all(
+          sections.map(async ({ id, file }) => {
+            try {
+              const res = await fetch(file);
+              if (!res.ok) throw new Error(res.statusText);
+              const html = await res.text();
+              const el = document.getElementById(id);
+              if (el) el.outerHTML = html;
+            } catch (e) {
+              console.warn('Could not load section:', file, e);
+            }
+          })
+        );
 
-      // All sections injected — now load script.js
-      const s = document.createElement('script');
-      s.src = 'script.js';
-      document.body.appendChild(s);
-    })();
-  </script>
+        // All sections injected — now load script.js
+        const s = document.createElement('script');
+        s.src = 'script.js';
+        document.body.appendChild(s);
+      })();
+    </script>
 </body>
 
 </html>
